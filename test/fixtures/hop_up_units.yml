@@ -1,0 +1,30 @@
+# == Schema Information
+#
+# Table name: hop_up_units
+#
+#  id          :bigint           not null, primary key
+#  brand       :string
+#  for_replica :string
+#  material    :integer
+#  price       :float
+#  reference   :string
+#  weight      :float
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
+one:
+  brand: MyString
+  reference: MyString
+  material: 1
+  for_replica: MyString
+  weight: 1.5
+  price: 1.5
+
+two:
+  brand: MyString
+  reference: MyString
+  material: 1
+  for_replica: MyString
+  weight: 1.5
+  price: 1.5

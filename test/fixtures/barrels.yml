@@ -1,0 +1,33 @@
+# == Schema Information
+#
+# Table name: barrels
+#
+#  id            :bigint           not null, primary key
+#  brand         :string
+#  compatibility :integer
+#  diameter      :float
+#  length        :float
+#  material      :integer
+#  price         :float
+#  reference     :string
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#
+
+one:
+  brand: MyString
+  reference: MyString
+  material: 1
+  length: 1.5
+  diameter: 1.5
+  compatibility: 1
+  price: 1.5
+
+two:
+  brand: MyString
+  reference: MyString
+  material: 1
+  length: 1.5
+  diameter: 1.5
+  compatibility: 1
+  price: 1.5

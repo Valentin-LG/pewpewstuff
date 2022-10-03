@@ -1,0 +1,33 @@
+# == Schema Information
+#
+# Table name: joint_hop_ups
+#
+#  id            :bigint           not null, primary key
+#  brand         :string
+#  compatibility :integer
+#  length        :float
+#  material      :integer
+#  price         :float
+#  reference     :string
+#  toughness     :integer
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#
+
+one:
+  brand: MyString
+  reference: MyString
+  material: 1
+  length: 1.5
+  toughness: 1
+  compatibility: 1
+  price: 1.5
+
+two:
+  brand: MyString
+  reference: MyString
+  material: 1
+  length: 1.5
+  toughness: 1
+  compatibility: 1
+  price: 1.5

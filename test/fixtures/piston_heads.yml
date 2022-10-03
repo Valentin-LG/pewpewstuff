@@ -1,0 +1,33 @@
+# == Schema Information
+#
+# Table name: piston_heads
+#
+#  id         :bigint           not null, primary key
+#  brand      :string
+#  material   :integer
+#  on_bearing :boolean
+#  price      :float
+#  reference  :string
+#  silenced   :boolean
+#  weight     :float
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+one:
+  brand: MyString
+  reference: MyString
+  material: 1
+  silenced: false
+  on_bearing: false
+  weight: 1.5
+  price: 1.5
+
+two:
+  brand: MyString
+  reference: MyString
+  material: 1
+  silenced: false
+  on_bearing: false
+  weight: 1.5
+  price: 1.5

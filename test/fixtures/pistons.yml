@@ -1,0 +1,33 @@
+# == Schema Information
+#
+# Table name: pistons
+#
+#  id             :bigint           not null, primary key
+#  brand          :string
+#  material       :integer
+#  price          :float
+#  reference      :string
+#  teeth_material :integer
+#  teeth_number   :integer
+#  weight         :float
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#
+
+one:
+  brand: MyString
+  reference: MyString
+  teeth_number: 1
+  teeth_material: 1
+  material: 1
+  weight: 1.5
+  price: 1.5
+
+two:
+  brand: MyString
+  reference: MyString
+  teeth_number: 1
+  teeth_material: 1
+  material: 1
+  weight: 1.5
+  price: 1.5

@@ -1,0 +1,36 @@
+# == Schema Information
+#
+# Table name: cylinders
+#
+#  id         :bigint           not null, primary key
+#  brand      :string
+#  diameter   :float
+#  drilled    :boolean
+#  material   :integer
+#  price      :float
+#  reference  :string
+#  size       :float
+#  weigh      :float
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+one:
+  brand: MyString
+  reference: MyString
+  material: 1
+  size: 1.5
+  diameter: 1.5
+  weigh: 1.5
+  drilled: false
+  price: 1.5
+
+two:
+  brand: MyString
+  reference: MyString
+  material: 1
+  size: 1.5
+  diameter: 1.5
+  weigh: 1.5
+  drilled: false
+  price: 1.5
