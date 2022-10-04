@@ -14,20 +14,20 @@
 #  updated_at :datetime         not null
 #
 
-one:
-  brand: MyString
-  reference: MyString
-  material: 1
+atm:
+  brand: "ATM"
+  reference: "ATM Xtra Precision Tête de Piston Métal"
+  material: "metal"
   silenced: false
-  on_bearing: false
-  weight: 1.5
-  price: 1.5
+  on_bearing: true
+  weight: 12.26
+  price: 5.9
 
-two:
-  brand: MyString
-  reference: MyString
-  material: 1
-  silenced: false
-  on_bearing: false
-  weight: 1.5
-  price: 1.5
+shs_silenced:
+  brand: "Super Shooter SHS"
+  reference: "Super Shooter SHS Tête de Piston Silencieuse"
+  material: "metal"
+  silenced: true
+  on_bearing: true
+  weight: 12.6
+  price: 8.9

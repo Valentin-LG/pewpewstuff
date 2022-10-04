@@ -14,20 +14,19 @@
 #  updated_at    :datetime         not null
 #
 
-one:
-  brand: MyString
-  reference: MyString
-  material: 1
-  length: 1.5
-  diameter: 1.5
-  compatibility: 1
-  price: 1.5
+cybergun:
+  brand: "cybergun"
+  reference: "default barrel"
+  material: "laiton"
+  length: 247.0
+  diameter: 6.08
+  compatibility: "aeg"
 
-two:
-  brand: MyString
-  reference: MyString
-  material: 1
-  length: 1.5
-  diameter: 1.5
-  compatibility: 1
-  price: 1.5
+specna:
+  brand: "specna arms"
+  reference: nil
+  material: "laiton"
+  length: 247.0
+  diameter: 6.08
+  compatibility: "aeg"
+

@@ -15,22 +15,23 @@
 #  updated_at  :datetime         not null
 #
 
-one:
-  brand: MyString
-  reference: MyString
-  material: 1
-  o_ring: 1
-  for_replica: MyString
-  silenced: false
-  weight: 1.5
-  price: 1.5
+shs:
+  brand: "Super Shooter SHS"
+  reference: "Super Shooter SHS Tête de Cylindre Silencieuse"
+  material: "aluminium"
+  o_ring: 2
+  for_replica: "type V2/V3"
+  silenced: true
+  weight: nil
+  price: 8.9
 
-two:
-  brand: MyString
-  reference: MyString
-  material: 1
+cybergun_p90:
+  brand: "cybergun"
+  reference: nil
+  material: "plastic"
   o_ring: 1
-  for_replica: MyString
+  for_replica: "P90"
   silenced: false
-  weight: 1.5
-  price: 1.5
+  weight: nil
+  price: nil
+

@@ -14,20 +14,11 @@
 #  updated_at   :datetime         not null
 #
 
-one:
-  brand: MyString
-  reference: MyString
-  length: 1.5
-  quick_detach: false
-  on_bearing: false
-  weight: 1.5
-  price: 1.5
-
-two:
-  brand: MyString
-  reference: MyString
-  length: 1.5
-  quick_detach: false
-  on_bearing: false
-  weight: 1.5
-  price: 1.5
+atm:
+  brand: "ATM"
+  reference: "ATM Xtra Precision Guide Ressort Acier pour Gearbox QD"
+  length: nil
+  quick_detach: true
+  on_bearing: true
+  weight: nil
+  price: 4.9

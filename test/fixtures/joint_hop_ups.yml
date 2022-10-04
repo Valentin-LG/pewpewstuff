@@ -14,20 +14,20 @@
 #  updated_at    :datetime         not null
 #
 
-one:
-  brand: MyString
-  reference: MyString
-  material: 1
-  length: 1.5
-  toughness: 1
-  compatibility: 1
-  price: 1.5
+maple60:
+  brand: "maple leaf"
+  reference: "Joint Hop Up 60° Super Macaron Maple Leaf"
+  material: nil
+  length: nil
+  toughness: 60
+  compatibility: "aeg"
+  price: 9.9
 
-two:
-  brand: MyString
-  reference: MyString
-  material: 1
-  length: 1.5
-  toughness: 1
-  compatibility: 1
-  price: 1.5
+maple50:
+  brand: "maple leaf"
+  reference: "Joint Hop Up 50° Super Macaron Maple Leaf"
+  material: nil
+  length: nil
+  toughness: 50
+  compatibility: "aeg"
+  price: 9.9

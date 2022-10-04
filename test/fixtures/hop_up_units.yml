@@ -13,18 +13,19 @@
 #  updated_at  :datetime         not null
 #
 
-one:
-  brand: MyString
-  reference: MyString
-  material: 1
-  for_replica: MyString
-  weight: 1.5
-  price: 1.5
+p90:
+  brand: "proWin"
+  reference: "Chambre Hop-Up P90 ProWin"
+  material: "aluminium"
+  for_replica: "P90"
+  weight: nil
+  price: 26.9
 
-two:
-  brand: MyString
-  reference: MyString
-  material: 1
-  for_replica: MyString
-  weight: 1.5
-  price: 1.5
+specna:
+  brand: "specna arms"
+  reference: nil
+  material: "plastic"
+  for_replica: "G36"
+  weight: nil
+  price: nil
+

@@ -15,22 +15,13 @@
 #  updated_at :datetime         not null
 #
 
-one:
-  brand: MyString
-  reference: MyString
-  material: 1
-  size: 1.5
-  diameter: 1.5
-  weigh: 1.5
-  drilled: false
-  price: 1.5
+atm:
+  brand: "ATM"
+  reference: "ATM Xtra Precision Cylindre Pour Canon Moyen"
+  material: "inox"
+  size: nil
+  diameter: nil
+  weigh: nil
+  drilled: true
+  price: 6.9
 
-two:
-  brand: MyString
-  reference: MyString
-  material: 1
-  size: 1.5
-  diameter: 1.5
-  weigh: 1.5
-  drilled: false
-  price: 1.5

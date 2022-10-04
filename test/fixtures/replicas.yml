@@ -16,16 +16,16 @@
 #  joint_hop_up_id :integer
 #
 
-one:
-  brand: MyString
-  name: MyString
-  reference: MyString
-  category: 1
-  price: 1.5
+p90:
+  brand: "Cybergun"
+   name: "FN P90"
+   reference: "FN P90 AEG FDE"
+   category: "aeg"
+   price: 149.99
 
-two:
-  brand: MyString
-  name: MyString
-  reference: MyString
-  category: 1
-  price: 1.5
+g36:
+  brand: "Specna Arms"
+  name: "H&K G36C"
+  reference: "SA-G12V"
+  category: "aeg"
+  price: 169.99

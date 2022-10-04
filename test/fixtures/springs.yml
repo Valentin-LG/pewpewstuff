@@ -12,16 +12,16 @@
 #  updated_at :datetime         not null
 #
 
-one:
-  brand: MyString
-  reference: MyString
-  spires: 1
+sp90:
+  brand: "Guarder"
+  reference: "Guarder Ressort SP90"
+  spires: 90
   linear: false
-  price: 1.5
+  price: 12.9
 
-two:
-  brand: MyString
-  reference: MyString
-  spires: 1
+begadi90:
+  brand: "Begadi"
+  reference: "Begadi PRO - M90 - Non Linear S-AEG tuning spring, laser inscribed & iridescent"
+  spires: 90
   linear: false
-  price: 1.5
+  price: 6.9

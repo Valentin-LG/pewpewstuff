@@ -21,20 +21,21 @@
 #  spring_id        :integer
 #
 
-one:
-  brand: MyString
-  reference: MyString
-  version: MyString
+v6:
+  brand: "cybergun"
+  reference: nil
+  version: "V6"
   quick_detach: false
   blowback: false
-  reinfored: false
-  price: 1.5
+  reinfored: nil
+  price: nil
 
-two:
-  brand: MyString
-  reference: MyString
-  version: MyString
-  quick_detach: false
-  blowback: false
-  reinfored: false
-  price: 1.5
+v3:
+  brand: "specna arms"
+  reference: nil
+  version: "V3"
+  quick_detach: true
+  blowback: true
+  reinfored: nil
+  price: nil
+

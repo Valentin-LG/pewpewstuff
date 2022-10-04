@@ -15,22 +15,23 @@
 #  updated_at  :datetime         not null
 #
 
-one:
-  brand: MyString
-  reference: MyString
-  material: 1
+atm_g36:
+  brand: "ATM"
+  reference: "ATM Xtra Precision Nozzle AR366"
+  material: "aluminium"
   o_ring: 1
-  for_replica: MyString
-  weight: 1.5
-  length: 1.5
-  price: 1.5
+  for_replica: "G36"
+  weight: nil
+  length: 24.5
+  price: 1.9
 
-two:
-  brand: MyString
-  reference: MyString
-  material: 1
+shs_P90:
+  brand: "SHS"
+  reference: "Nozzle P90 aluminium SHS"
+  material: "aluminium"
   o_ring: 1
-  for_replica: MyString
-  weight: 1.5
-  length: 1.5
-  price: 1.5
+  for_replica: "P90"
+  weight: nil
+  length: 20.8
+  price: 3.9
+
