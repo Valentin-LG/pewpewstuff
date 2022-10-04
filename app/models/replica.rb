@@ -22,4 +22,6 @@ class Replica < ApplicationRecord
   has_one :joint_hop_up
 
   enum category: CATEGORIES
+
+  validates :name, presence: true
 end
