@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* __Ruby version__ : ruby 2.7.6p219
+* __Rails version__ : 7.0.4
 
-* System dependencies
+After Swagger API changes run : 
+> rails rswag:specs:swaggerize
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
