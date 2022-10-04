@@ -13,7 +13,7 @@ gem "pg", "~> 1.1"
 gem 'rspec-rails'
 gem 'rswag'
 
-gem 'bundler-audit', '~> 0.9.1'
+gem 'bundler-audit'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"

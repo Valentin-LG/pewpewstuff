@@ -207,7 +207,7 @@ DEPENDENCIES
   active_model_serializers (~> 0.10.13)
   annotate (~> 3.2)
   bootsnap
-  bundler-audit (~> 0.9.1)
+  bundler-audit
   debug
   pg (~> 1.1)
   puma (~> 5.0)
