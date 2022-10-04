@@ -79,6 +79,9 @@ GEM
     bootsnap (1.13.0)
       msgpack (~> 1.2)
     builder (3.2.4)
+    bundler-audit (0.9.1)
+      bundler (>= 1.2.0, < 3)
+      thor (~> 1.0)
     case_transform (0.2)
       activesupport
     concurrent-ruby (1.1.10)
@@ -204,6 +207,7 @@ DEPENDENCIES
   active_model_serializers (~> 0.10.13)
   annotate (~> 3.2)
   bootsnap
+  bundler-audit (~> 0.9.1)
   debug
   pg (~> 1.1)
   puma (~> 5.0)
