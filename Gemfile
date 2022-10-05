@@ -13,7 +13,9 @@ gem "pg", "~> 1.1"
 gem 'rspec-rails'
 gem 'rswag'
 
+gem 'brakeman'
 gem 'bundler-audit'
+gem 'rubocop', require: false
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
