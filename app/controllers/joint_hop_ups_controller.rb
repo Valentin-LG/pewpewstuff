@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class JointHopUpsController < ApplicationController
-  before_action :set_joint_hop_up, only: %i[ show update destroy ]
+  before_action :set_joint_hop_up, only: %i[show update destroy]
 
   # GET /joint_hop_ups
   def index
@@ -39,13 +41,14 @@ class JointHopUpsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_joint_hop_up
-      @joint_hop_up = JointHopUp.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def joint_hop_up_params
-      params.require(:joint_hop_up).permit(:brand, :reference, :material, :length, :toughness, :compatibility, :price)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_joint_hop_up
+    @joint_hop_up = JointHopUp.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def joint_hop_up_params
+    params.require(:joint_hop_up).permit(:brand, :reference, :material, :length, :toughness, :compatibility, :price)
+  end
 end

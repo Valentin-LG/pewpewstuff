@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class SpringsController < ApplicationController
-  before_action :set_spring, only: %i[ show update destroy ]
+  before_action :set_spring, only: %i[show update destroy]
 
   # GET /springs
   def index
@@ -39,13 +41,14 @@ class SpringsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_spring
-      @spring = Spring.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def spring_params
-      params.require(:spring).permit(:brand, :reference, :spires, :linear, :price)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_spring
+    @spring = Spring.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def spring_params
+    params.require(:spring).permit(:brand, :reference, :spires, :linear, :price)
+  end
 end

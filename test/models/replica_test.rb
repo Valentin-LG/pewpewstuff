@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: replicas
@@ -15,7 +17,7 @@
 #  hop_up_unit_id  :integer
 #  joint_hop_up_id :integer
 #
-require "test_helper"
+require 'test_helper'
 
 class ReplicaTest < ActiveSupport::TestCase
   # test "the truth" do

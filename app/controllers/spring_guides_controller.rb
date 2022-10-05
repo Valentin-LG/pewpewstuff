@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class SpringGuidesController < ApplicationController
-  before_action :set_spring_guide, only: %i[ show update destroy ]
+  before_action :set_spring_guide, only: %i[show update destroy]
 
   # GET /spring_guides
   def index
@@ -39,13 +41,14 @@ class SpringGuidesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_spring_guide
-      @spring_guide = SpringGuide.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def spring_guide_params
-      params.require(:spring_guide).permit(:brand, :reference, :length, :quick_detach, :on_bearing, :weight, :price)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_spring_guide
+    @spring_guide = SpringGuide.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def spring_guide_params
+    params.require(:spring_guide).permit(:brand, :reference, :length, :quick_detach, :on_bearing, :weight, :price)
+  end
 end

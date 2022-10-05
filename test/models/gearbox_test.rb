@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: gearboxes
@@ -20,7 +22,7 @@
 #  spring_guide_id  :integer
 #  spring_id        :integer
 #
-require "test_helper"
+require 'test_helper'
 
 class GearboxTest < ActiveSupport::TestCase
   # test "the truth" do

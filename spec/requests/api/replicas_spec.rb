@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 require 'swagger_helper'
 
 RSpec.describe 'api/replicas', type: :request do
-
   path '/replicas' do
     get 'Retrieves all replicas' do
       tags 'Replicas'
@@ -15,7 +16,7 @@ RSpec.describe 'api/replicas', type: :request do
                    name: { type: :string, nullable: true },
                    reference: { type: :string, nullable: true },
                    category: { type: :string, nullable: true },
-                   price: { type: :number, nullable: true },
+                   price: { type: :number, nullable: true }
                  }
                }
 
@@ -36,7 +37,7 @@ RSpec.describe 'api/replicas', type: :request do
                    name: { type: :string, nullable: true },
                    reference: { type: :string, nullable: true },
                    category: { type: :string, nullable: true },
-                   price: { type: :number, nullable: true },
+                   price: { type: :number, nullable: true }
                  }
 
           let(:id) { Replica.create(name: 'P90', reference: 'cybergun P90').id }
@@ -59,9 +60,9 @@ RSpec.describe 'api/replicas', type: :request do
           name: { type: :string },
           reference: { type: :string, nullable: true },
           category: { type: :string, nullable: true },
-          price: { type: :number, nullable: true },
+          price: { type: :number, nullable: true }
         },
-        required: [ 'name' ]
+        required: ['name']
       }
 
       response '201', 'replica created' do

@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class CylinderHeadsController < ApplicationController
-  before_action :set_cylinder_head, only: %i[ show update destroy ]
+  before_action :set_cylinder_head, only: %i[show update destroy]
 
   # GET /cylinder_heads
   def index
@@ -39,13 +41,15 @@ class CylinderHeadsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_cylinder_head
-      @cylinder_head = CylinderHead.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def cylinder_head_params
-      params.require(:cylinder_head).permit(:brand, :reference, :material, :o_ring, :for_replica, :silenced, :weight, :price)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_cylinder_head
+    @cylinder_head = CylinderHead.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def cylinder_head_params
+    params.require(:cylinder_head).permit(:brand, :reference, :material, :o_ring, :for_replica, :silenced, :weight,
+                                          :price)
+  end
 end

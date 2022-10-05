@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class PistonHeadsController < ApplicationController
-  before_action :set_piston_head, only: %i[ show update destroy ]
+  before_action :set_piston_head, only: %i[show update destroy]
 
   # GET /piston_heads
   def index
@@ -39,13 +41,14 @@ class PistonHeadsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_piston_head
-      @piston_head = PistonHead.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def piston_head_params
-      params.require(:piston_head).permit(:brand, :reference, :material, :silenced, :on_bearing, :weight, :price)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_piston_head
+    @piston_head = PistonHead.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def piston_head_params
+    params.require(:piston_head).permit(:brand, :reference, :material, :silenced, :on_bearing, :weight, :price)
+  end
 end

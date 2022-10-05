@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class ReplicasController < ApplicationController
-  before_action :set_replica, only: %i[ show update destroy ]
+  before_action :set_replica, only: %i[show update destroy]
 
   # GET /replicas
   def index
@@ -39,13 +41,14 @@ class ReplicasController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_replica
-      @replica = Replica.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def replica_params
-      params.require(:replica).permit(:brand, :name, :reference, :category, :price)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_replica
+    @replica = Replica.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def replica_params
+    params.require(:replica).permit(:brand, :name, :reference, :category, :price)
+  end
 end

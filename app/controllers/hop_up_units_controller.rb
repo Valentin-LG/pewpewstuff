@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class HopUpUnitsController < ApplicationController
-  before_action :set_hop_up_unit, only: %i[ show update destroy ]
+  before_action :set_hop_up_unit, only: %i[show update destroy]
 
   # GET /hop_up_units
   def index
@@ -39,13 +41,14 @@ class HopUpUnitsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_hop_up_unit
-      @hop_up_unit = HopUpUnit.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def hop_up_unit_params
-      params.require(:hop_up_unit).permit(:brand, :reference, :material, :for_replica, :weight, :price)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_hop_up_unit
+    @hop_up_unit = HopUpUnit.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def hop_up_unit_params
+    params.require(:hop_up_unit).permit(:brand, :reference, :material, :for_replica, :weight, :price)
+  end
 end

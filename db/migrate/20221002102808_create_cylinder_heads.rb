@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateCylinderHeads < ActiveRecord::Migration[7.0]
   def change
     create_table :cylinder_heads do |t|

@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class NozzlesController < ApplicationController
-  before_action :set_nozzle, only: %i[ show update destroy ]
+  before_action :set_nozzle, only: %i[show update destroy]
 
   # GET /nozzles
   def index
@@ -39,13 +41,14 @@ class NozzlesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_nozzle
-      @nozzle = Nozzle.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def nozzle_params
-      params.require(:nozzle).permit(:brand, :reference, :material, :o_ring, :for_replica, :weight, :length, :price)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_nozzle
+    @nozzle = Nozzle.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def nozzle_params
+    params.require(:nozzle).permit(:brand, :reference, :material, :o_ring, :for_replica, :weight, :length, :price)
+  end
 end

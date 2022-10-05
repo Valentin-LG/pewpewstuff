@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class GearboxesController < ApplicationController
-  before_action :set_gearbox, only: %i[ show update destroy ]
+  before_action :set_gearbox, only: %i[show update destroy]
 
   # GET /gearboxes
   def index
@@ -39,13 +41,14 @@ class GearboxesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_gearbox
-      @gearbox = Gearbox.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def gearbox_params
-      params.require(:gearbox).permit(:brand, :reference, :version, :quick_detach, :blowback, :reinfored, :price)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_gearbox
+    @gearbox = Gearbox.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def gearbox_params
+    params.require(:gearbox).permit(:brand, :reference, :version, :quick_detach, :blowback, :reinfored, :price)
+  end
 end
