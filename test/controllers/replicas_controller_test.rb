@@ -4,7 +4,7 @@ require 'test_helper'
 
 class ReplicasControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @replica = replicas(:one)
+    @replica = replicas(:g36)
   end
 
   test 'should get index' do

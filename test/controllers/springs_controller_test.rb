@@ -4,7 +4,7 @@ require 'test_helper'
 
 class SpringsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @spring = springs(:one)
+    @spring = springs(:sp90)
   end
 
   test 'should get index' do

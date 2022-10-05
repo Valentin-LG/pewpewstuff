@@ -4,7 +4,7 @@ require 'test_helper'
 
 class CylindersControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @cylinder = cylinders(:one)
+    @cylinder = cylinders(:atm)
   end
 
   test 'should get index' do

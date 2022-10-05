@@ -4,7 +4,7 @@ require 'test_helper'
 
 class NozzlesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @nozzle = nozzles(:one)
+    @nozzle = nozzles(:atm_g36)
   end
 
   test 'should get index' do

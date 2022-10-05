@@ -4,7 +4,7 @@ require 'test_helper'
 
 class HopUpUnitsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @hop_up_unit = hop_up_units(:one)
+    @hop_up_unit = hop_up_units(:specna)
   end
 
   test 'should get index' do

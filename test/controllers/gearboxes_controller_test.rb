@@ -4,7 +4,7 @@ require 'test_helper'
 
 class GearboxesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @gearbox = gearboxes(:one)
+    @gearbox = gearboxes(:v3)
   end
 
   test 'should get index' do

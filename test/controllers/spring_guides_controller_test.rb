@@ -4,7 +4,7 @@ require 'test_helper'
 
 class SpringGuidesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @spring_guide = spring_guides(:one)
+    @spring_guide = spring_guides(:atm)
   end
 
   test 'should get index' do

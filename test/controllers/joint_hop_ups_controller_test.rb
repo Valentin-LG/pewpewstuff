@@ -4,7 +4,7 @@ require 'test_helper'
 
 class JointHopUpsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @joint_hop_up = joint_hop_ups(:one)
+    @joint_hop_up = joint_hop_ups(:maple50)
   end
 
   test 'should get index' do

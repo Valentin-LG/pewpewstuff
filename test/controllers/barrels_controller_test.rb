@@ -4,7 +4,7 @@ require 'test_helper'
 
 class BarrelsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @barrel = barrels(:one)
+    @barrel = barrels(:cybergun)
   end
 
   test 'should get index' do

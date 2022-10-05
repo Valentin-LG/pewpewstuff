@@ -4,7 +4,7 @@ require 'test_helper'
 
 class PistonHeadsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @piston_head = piston_heads(:one)
+    @piston_head = piston_heads(:atm)
   end
 
   test 'should get index' do
