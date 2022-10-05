@@ -15,7 +15,17 @@ class GearboxesControllerTest < ActionDispatch::IntegrationTest
   test 'should create gearbox' do
     assert_difference('Gearbox.count') do
       post gearboxes_url,
-           params: { gearbox: { blowback: @gearbox.blowback, brand: @gearbox.brand, price: @gearbox.price, quick_detach: @gearbox.quick_detach, reference: @gearbox.reference, reinfored: @gearbox.reinfored, version: @gearbox.version } }, as: :json
+           params: {
+             gearbox: {
+               blowback: @gearbox.blowback,
+               brand: @gearbox.brand,
+               price: @gearbox.price,
+               quick_detach: @gearbox.quick_detach,
+               reference: @gearbox.reference,
+               reinfored: @gearbox.reinfored,
+               version: @gearbox.version
+             }
+           }, as: :json
     end
 
     assert_response :created
@@ -28,7 +38,17 @@ class GearboxesControllerTest < ActionDispatch::IntegrationTest
 
   test 'should update gearbox' do
     patch gearbox_url(@gearbox),
-          params: { gearbox: { blowback: @gearbox.blowback, brand: @gearbox.brand, price: @gearbox.price, quick_detach: @gearbox.quick_detach, reference: @gearbox.reference, reinfored: @gearbox.reinfored, version: @gearbox.version } }, as: :json
+          params: {
+            gearbox: {
+              blowback: @gearbox.blowback,
+              brand: @gearbox.brand,
+              price: @gearbox.price,
+              quick_detach: @gearbox.quick_detach,
+              reference: @gearbox.reference,
+              reinfored: @gearbox.reinfored,
+              version: @gearbox.version
+            }
+          }, as: :json
     assert_response :success
   end
 

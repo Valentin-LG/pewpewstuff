@@ -15,7 +15,17 @@ class SpringGuidesControllerTest < ActionDispatch::IntegrationTest
   test 'should create spring_guide' do
     assert_difference('SpringGuide.count') do
       post spring_guides_url,
-           params: { spring_guide: { brand: @spring_guide.brand, length: @spring_guide.length, on_bearing: @spring_guide.on_bearing, price: @spring_guide.price, quick_detach: @spring_guide.quick_detach, reference: @spring_guide.reference, weight: @spring_guide.weight } }, as: :json
+           params: {
+             spring_guide: {
+               brand: @spring_guide.brand,
+               length: @spring_guide.length,
+               on_bearing: @spring_guide.on_bearing,
+               price: @spring_guide.price,
+               quick_detach: @spring_guide.quick_detach,
+               reference: @spring_guide.reference,
+               weight: @spring_guide.weight
+             }
+           }, as: :json
     end
 
     assert_response :created
@@ -28,7 +38,17 @@ class SpringGuidesControllerTest < ActionDispatch::IntegrationTest
 
   test 'should update spring_guide' do
     patch spring_guide_url(@spring_guide),
-          params: { spring_guide: { brand: @spring_guide.brand, length: @spring_guide.length, on_bearing: @spring_guide.on_bearing, price: @spring_guide.price, quick_detach: @spring_guide.quick_detach, reference: @spring_guide.reference, weight: @spring_guide.weight } }, as: :json
+          params: {
+            spring_guide: {
+              brand: @spring_guide.brand,
+              length: @spring_guide.length,
+              on_bearing: @spring_guide.on_bearing,
+              price: @spring_guide.price,
+              quick_detach: @spring_guide.quick_detach,
+              reference: @spring_guide.reference,
+              weight: @spring_guide.weight
+            }
+          }, as: :json
     assert_response :success
   end
 

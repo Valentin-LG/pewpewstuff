@@ -15,7 +15,15 @@ class ReplicasControllerTest < ActionDispatch::IntegrationTest
   test 'should create replica' do
     assert_difference('Replica.count') do
       post replicas_url,
-           params: { replica: { brand: @replica.brand, category: @replica.category, name: @replica.name, price: @replica.price, reference: @replica.reference } }, as: :json
+           params: {
+             replica: {
+               brand: @replica.brand,
+               category: @replica.category,
+               name: @replica.name,
+               price: @replica.price,
+               reference: @replica.reference
+             }
+           }, as: :json
     end
 
     assert_response :created
@@ -28,7 +36,15 @@ class ReplicasControllerTest < ActionDispatch::IntegrationTest
 
   test 'should update replica' do
     patch replica_url(@replica),
-          params: { replica: { brand: @replica.brand, category: @replica.category, name: @replica.name, price: @replica.price, reference: @replica.reference } }, as: :json
+          params: {
+            replica: {
+              brand: @replica.brand,
+              category: @replica.category,
+              name: @replica.name,
+              price: @replica.price,
+              reference: @replica.reference
+            }
+          }, as: :json
     assert_response :success
   end
 

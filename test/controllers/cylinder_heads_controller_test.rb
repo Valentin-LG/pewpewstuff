@@ -15,7 +15,18 @@ class CylinderHeadsControllerTest < ActionDispatch::IntegrationTest
   test 'should create cylinder_head' do
     assert_difference('CylinderHead.count') do
       post cylinder_heads_url,
-           params: { cylinder_head: { brand: @cylinder_head.brand, for_replica: @cylinder_head.for_replica, material: @cylinder_head.material, o_ring: @cylinder_head.o_ring, price: @cylinder_head.price, reference: @cylinder_head.reference, silenced: @cylinder_head.silenced, weight: @cylinder_head.weight } }, as: :json
+           params: {
+             cylinder_head: {
+               brand: @cylinder_head.brand,
+               for_replica: @cylinder_head.for_replica,
+               material: @cylinder_head.material,
+               o_ring: @cylinder_head.o_ring,
+               price: @cylinder_head.price,
+               reference: @cylinder_head.reference,
+               silenced: @cylinder_head.silenced,
+               weight: @cylinder_head.weight
+             }
+           }, as: :json
     end
 
     assert_response :created
@@ -28,7 +39,18 @@ class CylinderHeadsControllerTest < ActionDispatch::IntegrationTest
 
   test 'should update cylinder_head' do
     patch cylinder_head_url(@cylinder_head),
-          params: { cylinder_head: { brand: @cylinder_head.brand, for_replica: @cylinder_head.for_replica, material: @cylinder_head.material, o_ring: @cylinder_head.o_ring, price: @cylinder_head.price, reference: @cylinder_head.reference, silenced: @cylinder_head.silenced, weight: @cylinder_head.weight } }, as: :json
+          params: {
+            cylinder_head: {
+              brand: @cylinder_head.brand,
+              for_replica: @cylinder_head.for_replica,
+              material: @cylinder_head.material,
+              o_ring: @cylinder_head.o_ring,
+              price: @cylinder_head.price,
+              reference: @cylinder_head.reference,
+              silenced: @cylinder_head.silenced,
+              weight: @cylinder_head.weight
+            }
+          }, as: :json
     assert_response :success
   end
 

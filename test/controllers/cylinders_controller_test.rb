@@ -15,7 +15,18 @@ class CylindersControllerTest < ActionDispatch::IntegrationTest
   test 'should create cylinder' do
     assert_difference('Cylinder.count') do
       post cylinders_url,
-           params: { cylinder: { brand: @cylinder.brand, diameter: @cylinder.diameter, drilled: @cylinder.drilled, material: @cylinder.material, price: @cylinder.price, reference: @cylinder.reference, size: @cylinder.size, weigh: @cylinder.weigh } }, as: :json
+           params: {
+             cylinder: {
+               brand: @cylinder.brand,
+               diameter: @cylinder.diameter,
+               drilled: @cylinder.drilled,
+               material: @cylinder.material,
+               price: @cylinder.price,
+               reference: @cylinder.reference,
+               size: @cylinder.size,
+               weigh: @cylinder.weigh
+             }
+           }, as: :json
     end
 
     assert_response :created
@@ -28,7 +39,18 @@ class CylindersControllerTest < ActionDispatch::IntegrationTest
 
   test 'should update cylinder' do
     patch cylinder_url(@cylinder),
-          params: { cylinder: { brand: @cylinder.brand, diameter: @cylinder.diameter, drilled: @cylinder.drilled, material: @cylinder.material, price: @cylinder.price, reference: @cylinder.reference, size: @cylinder.size, weigh: @cylinder.weigh } }, as: :json
+          params: {
+            cylinder: {
+              brand: @cylinder.brand,
+              diameter: @cylinder.diameter,
+              drilled: @cylinder.drilled,
+              material: @cylinder.material,
+              price: @cylinder.price,
+              reference: @cylinder.reference,
+              size: @cylinder.size,
+              weigh: @cylinder.weigh
+            }
+          }, as: :json
     assert_response :success
   end
 

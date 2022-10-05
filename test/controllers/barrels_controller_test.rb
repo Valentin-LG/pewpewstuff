@@ -15,7 +15,17 @@ class BarrelsControllerTest < ActionDispatch::IntegrationTest
   test 'should create barrel' do
     assert_difference('Barrel.count') do
       post barrels_url,
-           params: { barrel: { brand: @barrel.brand, compatibility: @barrel.compatibility, diameter: @barrel.diameter, length: @barrel.length, material: @barrel.material, price: @barrel.price, reference: @barrel.reference } }, as: :json
+           params: {
+             barrel: {
+               brand: @barrel.brand,
+               compatibility: @barrel.compatibility,
+               diameter: @barrel.diameter,
+               length: @barrel.length,
+               material: @barrel.material,
+               price: @barrel.price,
+               reference: @barrel.reference
+             }
+           }, as: :json
     end
 
     assert_response :created
@@ -28,7 +38,17 @@ class BarrelsControllerTest < ActionDispatch::IntegrationTest
 
   test 'should update barrel' do
     patch barrel_url(@barrel),
-          params: { barrel: { brand: @barrel.brand, compatibility: @barrel.compatibility, diameter: @barrel.diameter, length: @barrel.length, material: @barrel.material, price: @barrel.price, reference: @barrel.reference } }, as: :json
+          params: {
+            barrel: {
+              brand: @barrel.brand,
+              compatibility: @barrel.compatibility,
+              diameter: @barrel.diameter,
+              length: @barrel.length,
+              material: @barrel.material,
+              price: @barrel.price,
+              reference: @barrel.reference
+            }
+          }, as: :json
     assert_response :success
   end
 

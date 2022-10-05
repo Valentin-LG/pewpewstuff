@@ -18,6 +18,8 @@ gem 'rswag'
 gem 'brakeman'
 gem 'bundler-audit'
 gem 'rubocop', require: false
+gem 'rubocop-rails', require: false
+gem 'rubocop-rspec', require: false
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'

@@ -15,7 +15,17 @@ class PistonsControllerTest < ActionDispatch::IntegrationTest
   test 'should create piston' do
     assert_difference('Piston.count') do
       post pistons_url,
-           params: { piston: { brand: @piston.brand, material: @piston.material, price: @piston.price, reference: @piston.reference, teeth_material: @piston.teeth_material, teeth_number: @piston.teeth_number, weight: @piston.weight } }, as: :json
+           params: {
+             piston: {
+               brand: @piston.brand,
+               material: @piston.material,
+               price: @piston.price,
+               reference: @piston.reference,
+               teeth_material: @piston.teeth_material,
+               teeth_number: @piston.teeth_number,
+               weight: @piston.weight
+             }
+           }, as: :json
     end
 
     assert_response :created
@@ -28,7 +38,17 @@ class PistonsControllerTest < ActionDispatch::IntegrationTest
 
   test 'should update piston' do
     patch piston_url(@piston),
-          params: { piston: { brand: @piston.brand, material: @piston.material, price: @piston.price, reference: @piston.reference, teeth_material: @piston.teeth_material, teeth_number: @piston.teeth_number, weight: @piston.weight } }, as: :json
+          params: {
+            piston: {
+              brand: @piston.brand,
+              material: @piston.material,
+              price: @piston.price,
+              reference: @piston.reference,
+              teeth_material: @piston.teeth_material,
+              teeth_number: @piston.teeth_number,
+              weight: @piston.weight
+            }
+          }, as: :json
     assert_response :success
   end
 

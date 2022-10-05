@@ -15,7 +15,17 @@ class PistonHeadsControllerTest < ActionDispatch::IntegrationTest
   test 'should create piston_head' do
     assert_difference('PistonHead.count') do
       post piston_heads_url,
-           params: { piston_head: { brand: @piston_head.brand, material: @piston_head.material, on_bearing: @piston_head.on_bearing, price: @piston_head.price, reference: @piston_head.reference, silenced: @piston_head.silenced, weight: @piston_head.weight } }, as: :json
+           params: {
+             piston_head: {
+               brand: @piston_head.brand,
+               material: @piston_head.material,
+               on_bearing: @piston_head.on_bearing,
+               price: @piston_head.price,
+               reference: @piston_head.reference,
+               silenced: @piston_head.silenced,
+               weight: @piston_head.weight
+             }
+           }, as: :json
     end
 
     assert_response :created
@@ -28,7 +38,17 @@ class PistonHeadsControllerTest < ActionDispatch::IntegrationTest
 
   test 'should update piston_head' do
     patch piston_head_url(@piston_head),
-          params: { piston_head: { brand: @piston_head.brand, material: @piston_head.material, on_bearing: @piston_head.on_bearing, price: @piston_head.price, reference: @piston_head.reference, silenced: @piston_head.silenced, weight: @piston_head.weight } }, as: :json
+          params: {
+            piston_head: {
+              brand: @piston_head.brand,
+              material: @piston_head.material,
+              on_bearing: @piston_head.on_bearing,
+              price: @piston_head.price,
+              reference: @piston_head.reference,
+              silenced: @piston_head.silenced,
+              weight: @piston_head.weight
+            }
+          }, as: :json
     assert_response :success
   end
 

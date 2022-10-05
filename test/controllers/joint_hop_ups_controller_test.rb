@@ -15,7 +15,17 @@ class JointHopUpsControllerTest < ActionDispatch::IntegrationTest
   test 'should create joint_hop_up' do
     assert_difference('JointHopUp.count') do
       post joint_hop_ups_url,
-           params: { joint_hop_up: { brand: @joint_hop_up.brand, compatibility: @joint_hop_up.compatibility, length: @joint_hop_up.length, material: @joint_hop_up.material, price: @joint_hop_up.price, reference: @joint_hop_up.reference, toughness: @joint_hop_up.toughness } }, as: :json
+           params: {
+             joint_hop_up: {
+               brand: @joint_hop_up.brand,
+               compatibility: @joint_hop_up.compatibility,
+               length: @joint_hop_up.length,
+               material: @joint_hop_up.material,
+               price: @joint_hop_up.price,
+               reference: @joint_hop_up.reference,
+               toughness: @joint_hop_up.toughness
+             }
+           }, as: :json
     end
 
     assert_response :created
@@ -28,7 +38,17 @@ class JointHopUpsControllerTest < ActionDispatch::IntegrationTest
 
   test 'should update joint_hop_up' do
     patch joint_hop_up_url(@joint_hop_up),
-          params: { joint_hop_up: { brand: @joint_hop_up.brand, compatibility: @joint_hop_up.compatibility, length: @joint_hop_up.length, material: @joint_hop_up.material, price: @joint_hop_up.price, reference: @joint_hop_up.reference, toughness: @joint_hop_up.toughness } }, as: :json
+          params: {
+            joint_hop_up: {
+              brand: @joint_hop_up.brand,
+              compatibility: @joint_hop_up.compatibility,
+              length: @joint_hop_up.length,
+              material: @joint_hop_up.material,
+              price: @joint_hop_up.price,
+              reference: @joint_hop_up.reference,
+              toughness: @joint_hop_up.toughness
+            }
+          }, as: :json
     assert_response :success
   end
 

@@ -15,7 +15,15 @@ class SpringsControllerTest < ActionDispatch::IntegrationTest
   test 'should create spring' do
     assert_difference('Spring.count') do
       post springs_url,
-           params: { spring: { brand: @spring.brand, linear: @spring.linear, price: @spring.price, reference: @spring.reference, spires: @spring.spires } }, as: :json
+           params: {
+             spring: {
+               brand: @spring.brand,
+               linear: @spring.linear,
+               price: @spring.price,
+               reference: @spring.reference,
+               spires: @spring.spires
+             }
+           }, as: :json
     end
 
     assert_response :created
@@ -28,7 +36,15 @@ class SpringsControllerTest < ActionDispatch::IntegrationTest
 
   test 'should update spring' do
     patch spring_url(@spring),
-          params: { spring: { brand: @spring.brand, linear: @spring.linear, price: @spring.price, reference: @spring.reference, spires: @spring.spires } }, as: :json
+          params: {
+            spring: {
+              brand: @spring.brand,
+              linear: @spring.linear,
+              price: @spring.price,
+              reference: @spring.reference,
+              spires: @spring.spires
+            }
+          }, as: :json
     assert_response :success
   end
 
