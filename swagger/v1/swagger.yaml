@@ -4,6 +4,1418 @@ info:
   title: API V1
   version: v1
 paths:
+  "/barrels":
+    get:
+      summary: Retrieves all barrels
+      tags:
+      - Barrels
+      responses:
+        '200':
+          description: barrel found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  properties:
+                    id:
+                      type: integer
+                    brand:
+                      type: string
+                      nullable: true
+                    reference:
+                      type: string
+                      nullable: true
+                    material:
+                      type: integer
+                      nullable: true
+                    length:
+                      type: float
+                      nullable: true
+                    diameter:
+                      type: float
+                      nullable: true
+                    compatibility:
+                      type: integer
+                      nullable: true
+                    price:
+                      type: float
+                      nullable: true
+            application/xml:
+              schema:
+                type: array
+                items:
+                  properties:
+                    id:
+                      type: integer
+                    brand:
+                      type: string
+                      nullable: true
+                    reference:
+                      type: string
+                      nullable: true
+                    material:
+                      type: integer
+                      nullable: true
+                    length:
+                      type: float
+                      nullable: true
+                    diameter:
+                      type: float
+                      nullable: true
+                    compatibility:
+                      type: integer
+                      nullable: true
+                    price:
+                      type: float
+                      nullable: true
+    post:
+      summary: Creates a barrel
+      tags:
+      - Barrels
+      parameters: []
+      responses:
+        '201':
+          description: barrel created
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                brand:
+                  type: string
+                  nullable: true
+                reference:
+                  type: string
+                material:
+                  type: integer
+                  nullable: true
+                length:
+                  type: float
+                  nullable: true
+                diameter:
+                  type: float
+                  nullable: true
+                compatibility:
+                  type: integer
+                  nullable: true
+                price:
+                  type: float
+                  nullable: true
+              required:
+              - reference
+  "/barrels/{id}":
+    get:
+      summary: Retrieves a barrel
+      tags:
+      - Barrels
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: barrel found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  brand:
+                    type: string
+                    nullable: true
+                  reference:
+                    type: string
+                    nullable: true
+                  material:
+                    type: integer
+                    nullable: true
+                  length:
+                    type: float
+                    nullable: true
+                  diameter:
+                    type: float
+                    nullable: true
+                  compatibility:
+                    type: integer
+                    nullable: true
+                  price:
+                    type: float
+                    nullable: true
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  brand:
+                    type: string
+                    nullable: true
+                  reference:
+                    type: string
+                    nullable: true
+                  material:
+                    type: integer
+                    nullable: true
+                  length:
+                    type: float
+                    nullable: true
+                  diameter:
+                    type: float
+                    nullable: true
+                  compatibility:
+                    type: integer
+                    nullable: true
+                  price:
+                    type: float
+                    nullable: true
+        '404':
+          description: barrel not found
+  "/cylinder_heads":
+    get:
+      summary: Retrieves all cylinder heads
+      tags:
+      - Cylinder Heads
+      responses:
+        '200':
+          description: cylinder head found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  properties:
+                    id:
+                      type: integer
+                    brand:
+                      type: string
+                      nullable: true
+                    reference:
+                      type: string
+                      nullable: true
+                    material:
+                      type: integer
+                      nullable: true
+                    o_ring:
+                      type: integer
+                      nullable: true
+                    for_replica:
+                      type: string
+                      nullable: true
+                    silenced:
+                      type: boolean
+                      nullable: true
+                    weight:
+                      type: float
+                      nullable: true
+                    price:
+                      type: float
+                      nullable: true
+            application/xml:
+              schema:
+                type: array
+                items:
+                  properties:
+                    id:
+                      type: integer
+                    brand:
+                      type: string
+                      nullable: true
+                    reference:
+                      type: string
+                      nullable: true
+                    material:
+                      type: integer
+                      nullable: true
+                    o_ring:
+                      type: integer
+                      nullable: true
+                    for_replica:
+                      type: string
+                      nullable: true
+                    silenced:
+                      type: boolean
+                      nullable: true
+                    weight:
+                      type: float
+                      nullable: true
+                    price:
+                      type: float
+                      nullable: true
+    post:
+      summary: Creates a cylinder head
+      tags:
+      - Cylinder Heads
+      parameters: []
+      responses:
+        '201':
+          description: cylinder head created
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                brand:
+                  type: string
+                  nullable: true
+                reference:
+                  type: string
+                material:
+                  type: integer
+                  nullable: true
+                o_ring:
+                  type: integer
+                  nullable: true
+                for_replica:
+                  type: string
+                  nullable: true
+                silenced:
+                  type: boolean
+                  nullable: true
+                weight:
+                  type: float
+                  nullable: true
+                price:
+                  type: float
+                  nullable: true
+              required:
+              - reference
+  "/cylinder_heads/{id}":
+    get:
+      summary: Retrieves a cylinder head
+      tags:
+      - Cylinder Heads
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: cylinder head found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  brand:
+                    type: string
+                    nullable: true
+                  reference:
+                    type: string
+                    nullable: true
+                  material:
+                    type: integer
+                    nullable: true
+                  o_ring:
+                    type: integer
+                    nullable: true
+                  for_replica:
+                    type: string
+                    nullable: true
+                  silenced:
+                    type: boolean
+                    nullable: true
+                  weight:
+                    type: float
+                    nullable: true
+                  price:
+                    type: float
+                    nullable: true
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  brand:
+                    type: string
+                    nullable: true
+                  reference:
+                    type: string
+                    nullable: true
+                  material:
+                    type: integer
+                    nullable: true
+                  o_ring:
+                    type: integer
+                    nullable: true
+                  for_replica:
+                    type: string
+                    nullable: true
+                  silenced:
+                    type: boolean
+                    nullable: true
+                  weight:
+                    type: float
+                    nullable: true
+                  price:
+                    type: float
+                    nullable: true
+        '404':
+          description: cylinder head not found
+  "/gearboxes":
+    get:
+      summary: Retrieves all gearboxes
+      tags:
+      - Gearboxes
+      responses:
+        '200':
+          description: gearbox found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  properties:
+                    id:
+                      type: integer
+                    brand:
+                      type: string
+                      nullable: true
+                    reference:
+                      type: string
+                      nullable: true
+                    version:
+                      type: string
+                      nullable: true
+                    quick_detach:
+                      type: boolean
+                      nullable: true
+                    blowback:
+                      type: boolean
+                      nullable: true
+                    reinfored:
+                      type: boolean
+                      nullable: true
+                    price:
+                      type: float
+                      nullable: true
+            application/xml:
+              schema:
+                type: array
+                items:
+                  properties:
+                    id:
+                      type: integer
+                    brand:
+                      type: string
+                      nullable: true
+                    reference:
+                      type: string
+                      nullable: true
+                    version:
+                      type: string
+                      nullable: true
+                    quick_detach:
+                      type: boolean
+                      nullable: true
+                    blowback:
+                      type: boolean
+                      nullable: true
+                    reinfored:
+                      type: boolean
+                      nullable: true
+                    price:
+                      type: float
+                      nullable: true
+    post:
+      summary: Creates a gearbox
+      tags:
+      - Gearboxes
+      parameters: []
+      responses:
+        '201':
+          description: gearbox created
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                brand:
+                  type: string
+                  nullable: true
+                reference:
+                  type: string
+                  nullable: true
+                version:
+                  type: string
+                  nullable: true
+                quick_detach:
+                  type: boolean
+                  nullable: true
+                blowback:
+                  type: boolean
+                  nullable: true
+                reinfored:
+                  type: boolean
+                  nullable: true
+                price:
+                  type: float
+                  nullable: true
+              required:
+              - reference
+  "/gearboxes/{id}":
+    get:
+      summary: Retrieves a gearbox
+      tags:
+      - Gearboxes
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: gearbox found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  brand:
+                    type: string
+                    nullable: true
+                  reference:
+                    type: string
+                    nullable: true
+                  version:
+                    type: string
+                    nullable: true
+                  quick_detach:
+                    type: boolean
+                    nullable: true
+                  blowback:
+                    type: boolean
+                    nullable: true
+                  reinfored:
+                    type: boolean
+                    nullable: true
+                  price:
+                    type: float
+                    nullable: true
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  brand:
+                    type: string
+                    nullable: true
+                  reference:
+                    type: string
+                    nullable: true
+                  version:
+                    type: string
+                    nullable: true
+                  quick_detach:
+                    type: boolean
+                    nullable: true
+                  blowback:
+                    type: boolean
+                    nullable: true
+                  reinfored:
+                    type: boolean
+                    nullable: true
+                  price:
+                    type: float
+                    nullable: true
+        '404':
+          description: gearbox not found
+  "/hop_up_units":
+    get:
+      summary: Retrieves all hop up units
+      tags:
+      - Hop up units
+      responses:
+        '200':
+          description: hop up unit found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  properties:
+                    id:
+                      type: integer
+                    brand:
+                      type: string
+                      nullable: true
+                    reference:
+                      type: string
+                      nullable: true
+                    material:
+                      type: integer
+                      nullable: true
+                    for_replica:
+                      type: string
+                      nullable: true
+                    weight:
+                      type: float
+                      nullable: true
+                    price:
+                      type: float
+                      nullable: true
+            application/xml:
+              schema:
+                type: array
+                items:
+                  properties:
+                    id:
+                      type: integer
+                    brand:
+                      type: string
+                      nullable: true
+                    reference:
+                      type: string
+                      nullable: true
+                    material:
+                      type: integer
+                      nullable: true
+                    for_replica:
+                      type: string
+                      nullable: true
+                    weight:
+                      type: float
+                      nullable: true
+                    price:
+                      type: float
+                      nullable: true
+    post:
+      summary: Creates a hop up unit
+      tags:
+      - Hop up units
+      parameters: []
+      responses:
+        '201':
+          description: hop up unit created
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                brand:
+                  type: string
+                  nullable: true
+                reference:
+                  type: string
+                  nullable: true
+                material:
+                  type: integer
+                  nullable: true
+                for_replica:
+                  type: string
+                  nullable: true
+                weight:
+                  type: float
+                  nullable: true
+                price:
+                  type: float
+                  nullable: true
+              required:
+              - reference
+  "/hop_up_units/{id}":
+    get:
+      summary: Retrieves a hop up unit
+      tags:
+      - Hop up units
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: hop up unit found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  brand:
+                    type: string
+                    nullable: true
+                  reference:
+                    type: string
+                    nullable: true
+                  material:
+                    type: integer
+                    nullable: true
+                  for_replica:
+                    type: string
+                    nullable: true
+                  weight:
+                    type: float
+                    nullable: true
+                  price:
+                    type: float
+                    nullable: true
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  brand:
+                    type: string
+                    nullable: true
+                  reference:
+                    type: string
+                    nullable: true
+                  material:
+                    type: integer
+                    nullable: true
+                  for_replica:
+                    type: string
+                    nullable: true
+                  weight:
+                    type: float
+                    nullable: true
+                  price:
+                    type: float
+                    nullable: true
+        '404':
+          description: hop up unit not found
+  "/joint_hop_ups":
+    get:
+      summary: Retrieves all joint hop ups
+      tags:
+      - Joint hop ups
+      responses:
+        '200':
+          description: joint hop up found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  properties:
+                    id:
+                      type: integer
+                    brand:
+                      type: string
+                      nullable: true
+                    reference:
+                      type: string
+                      nullable: true
+                    material:
+                      type: integer
+                      nullable: true
+                    length:
+                      type: float
+                      nullable: true
+                    toughness:
+                      type: integer
+                      nullable: true
+                    compatibility:
+                      type: integer
+                      nullable: true
+                    price:
+                      type: float
+                      nullable: true
+            application/xml:
+              schema:
+                type: array
+                items:
+                  properties:
+                    id:
+                      type: integer
+                    brand:
+                      type: string
+                      nullable: true
+                    reference:
+                      type: string
+                      nullable: true
+                    material:
+                      type: integer
+                      nullable: true
+                    length:
+                      type: float
+                      nullable: true
+                    toughness:
+                      type: integer
+                      nullable: true
+                    compatibility:
+                      type: integer
+                      nullable: true
+                    price:
+                      type: float
+                      nullable: true
+    post:
+      summary: Creates a joint hop up
+      tags:
+      - Joint hop ups
+      parameters: []
+      responses:
+        '201':
+          description: joint hop up created
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                brand:
+                  type: string
+                  nullable: true
+                reference:
+                  type: string
+                  nullable: true
+                material:
+                  type: integer
+                  nullable: true
+                length:
+                  type: float
+                  nullable: true
+                toughness:
+                  type: integer
+                  nullable: true
+                compatibility:
+                  type: integer
+                  nullable: true
+                price:
+                  type: float
+                  nullable: true
+              required:
+              - reference
+  "/joint_hop_ups/{id}":
+    get:
+      summary: Retrieves a joint hop up
+      tags:
+      - Joint hop ups
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: joint hop up found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  brand:
+                    type: string
+                    nullable: true
+                  reference:
+                    type: string
+                    nullable: true
+                  material:
+                    type: integer
+                    nullable: true
+                  length:
+                    type: float
+                    nullable: true
+                  toughness:
+                    type: integer
+                    nullable: true
+                  compatibility:
+                    type: integer
+                    nullable: true
+                  price:
+                    type: float
+                    nullable: true
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  brand:
+                    type: string
+                    nullable: true
+                  reference:
+                    type: string
+                    nullable: true
+                  material:
+                    type: integer
+                    nullable: true
+                  length:
+                    type: float
+                    nullable: true
+                  toughness:
+                    type: integer
+                    nullable: true
+                  compatibility:
+                    type: integer
+                    nullable: true
+                  price:
+                    type: float
+                    nullable: true
+        '404':
+          description: joint hop up not found
+  "/nozzles":
+    get:
+      summary: Retrieves all nozzles
+      tags:
+      - Nozzles
+      responses:
+        '200':
+          description: nozzle found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  properties:
+                    id:
+                      type: integer
+                    brand:
+                      type: string
+                      nullable: true
+                    reference:
+                      type: string
+                      nullable: true
+                    material:
+                      type: integer
+                      nullable: true
+                    o_ring:
+                      type: integer
+                      nullable: true
+                    for_replica:
+                      type: string
+                      nullable: true
+                    weight:
+                      type: float
+                      nullable: true
+                    length:
+                      type: float
+                      nullable: true
+                    pric:
+                      type: float
+                      nullable: true
+            application/xml:
+              schema:
+                type: array
+                items:
+                  properties:
+                    id:
+                      type: integer
+                    brand:
+                      type: string
+                      nullable: true
+                    reference:
+                      type: string
+                      nullable: true
+                    material:
+                      type: integer
+                      nullable: true
+                    o_ring:
+                      type: integer
+                      nullable: true
+                    for_replica:
+                      type: string
+                      nullable: true
+                    weight:
+                      type: float
+                      nullable: true
+                    length:
+                      type: float
+                      nullable: true
+                    pric:
+                      type: float
+                      nullable: true
+    post:
+      summary: Creates a nozzle
+      tags:
+      - Nozzles
+      parameters: []
+      responses:
+        '201':
+          description: nozzle created
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                brand:
+                  type: string
+                  nullable: true
+                reference:
+                  type: string
+                  nullable: true
+                material:
+                  type: integer
+                  nullable: true
+                o_ring:
+                  type: integer
+                  nullable: true
+                for_replica:
+                  type: string
+                  nullable: true
+                weight:
+                  type: float
+                  nullable: true
+                length:
+                  type: float
+                  nullable: true
+                pric:
+                  type: float
+                  nullable: true
+              required:
+              - reference
+  "/nozzles/{id}":
+    get:
+      summary: Retrieves a nozzle
+      tags:
+      - Nozzles
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: nozzle found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  brand:
+                    type: string
+                    nullable: true
+                  reference:
+                    type: string
+                    nullable: true
+                  material:
+                    type: integer
+                    nullable: true
+                  o_ring:
+                    type: integer
+                    nullable: true
+                  for_replica:
+                    type: string
+                    nullable: true
+                  weight:
+                    type: float
+                    nullable: true
+                  length:
+                    type: float
+                    nullable: true
+                  pric:
+                    type: float
+                    nullable: true
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  brand:
+                    type: string
+                    nullable: true
+                  reference:
+                    type: string
+                    nullable: true
+                  material:
+                    type: integer
+                    nullable: true
+                  o_ring:
+                    type: integer
+                    nullable: true
+                  for_replica:
+                    type: string
+                    nullable: true
+                  weight:
+                    type: float
+                    nullable: true
+                  length:
+                    type: float
+                    nullable: true
+                  pric:
+                    type: float
+                    nullable: true
+        '404':
+          description: nozzle not found
+  "/piston_heads":
+    get:
+      summary: Retrieves all piston heads
+      tags:
+      - Piston heads
+      responses:
+        '200':
+          description: piston head found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  properties:
+                    id:
+                      type: integer
+                    brand:
+                      type: string
+                      nullable: true
+                    reference:
+                      type: string
+                      nullable: true
+                    material:
+                      type: integer
+                      nullable: true
+                    silenced:
+                      type: boolean
+                      nullable: true
+                    on_bearing:
+                      type: boolean
+                      nullable: true
+                    weight:
+                      type: float
+                      nullable: true
+                    price:
+                      type: float
+                      nullable: true
+            application/xml:
+              schema:
+                type: array
+                items:
+                  properties:
+                    id:
+                      type: integer
+                    brand:
+                      type: string
+                      nullable: true
+                    reference:
+                      type: string
+                      nullable: true
+                    material:
+                      type: integer
+                      nullable: true
+                    silenced:
+                      type: boolean
+                      nullable: true
+                    on_bearing:
+                      type: boolean
+                      nullable: true
+                    weight:
+                      type: float
+                      nullable: true
+                    price:
+                      type: float
+                      nullable: true
+    post:
+      summary: Creates a piston head
+      tags:
+      - Piston heads
+      parameters: []
+      responses:
+        '201':
+          description: piston head created
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                brand:
+                  type: string
+                  nullable: true
+                reference:
+                  type: string
+                material:
+                  type: integer
+                  nullable: true
+                silenced:
+                  type: boolean
+                  nullable: true
+                on_bearing:
+                  type: boolean
+                  nullable: true
+                weight:
+                  type: float
+                  nullable: true
+                price:
+                  type: float
+                  nullable: true
+              required:
+              - reference
+  "/piston_heads/{id}":
+    get:
+      summary: Retrieves a piston head
+      tags:
+      - Piston heads
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: piston head found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  brand:
+                    type: string
+                    nullable: true
+                  reference:
+                    type: string
+                    nullable: true
+                  material:
+                    type: integer
+                    nullable: true
+                  silenced:
+                    type: boolean
+                    nullable: true
+                  on_bearing:
+                    type: boolean
+                    nullable: true
+                  weight:
+                    type: float
+                    nullable: true
+                  price:
+                    type: float
+                    nullable: true
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  brand:
+                    type: string
+                    nullable: true
+                  reference:
+                    type: string
+                    nullable: true
+                  material:
+                    type: integer
+                    nullable: true
+                  silenced:
+                    type: boolean
+                    nullable: true
+                  on_bearing:
+                    type: boolean
+                    nullable: true
+                  weight:
+                    type: float
+                    nullable: true
+                  price:
+                    type: float
+                    nullable: true
+        '404':
+          description: piston head not found
+  "/pistons":
+    get:
+      summary: Retrieves all pistons
+      tags:
+      - Pistons
+      responses:
+        '200':
+          description: piston found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  properties:
+                    id:
+                      type: integer
+                    brand:
+                      type: string
+                      nullable: true
+                    reference:
+                      type: string
+                      nullable: true
+                    teeth_number:
+                      type: integer
+                      nullable: true
+                    teeth_material:
+                      type: integer
+                      nullable: true
+                    material:
+                      type: integer
+                      nullable: true
+                    weight:
+                      type: float
+                      nullable: true
+                    price:
+                      type: float
+                      nullable: true
+            application/xml:
+              schema:
+                type: array
+                items:
+                  properties:
+                    id:
+                      type: integer
+                    brand:
+                      type: string
+                      nullable: true
+                    reference:
+                      type: string
+                      nullable: true
+                    teeth_number:
+                      type: integer
+                      nullable: true
+                    teeth_material:
+                      type: integer
+                      nullable: true
+                    material:
+                      type: integer
+                      nullable: true
+                    weight:
+                      type: float
+                      nullable: true
+                    price:
+                      type: float
+                      nullable: true
+    post:
+      summary: Creates a piston
+      tags:
+      - Pistons
+      parameters: []
+      responses:
+        '201':
+          description: piston created
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                brand:
+                  type: string
+                  nullable: true
+                reference:
+                  type: string
+                  nullable: true
+                teeth_number:
+                  type: integer
+                  nullable: true
+                teeth_material:
+                  type: integer
+                  nullable: true
+                material:
+                  type: integer
+                  nullable: true
+                weight:
+                  type: float
+                  nullable: true
+                price:
+                  type: float
+                  nullable: true
+              required:
+              - reference
+  "/pistons/{id}":
+    get:
+      summary: Retrieves a piston
+      tags:
+      - Pistons
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: piston found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  brand:
+                    type: string
+                    nullable: true
+                  reference:
+                    type: string
+                    nullable: true
+                  teeth_number:
+                    type: integer
+                    nullable: true
+                  teeth_material:
+                    type: integer
+                    nullable: true
+                  material:
+                    type: integer
+                    nullable: true
+                  weight:
+                    type: float
+                    nullable: true
+                  price:
+                    type: float
+                    nullable: true
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  brand:
+                    type: string
+                    nullable: true
+                  reference:
+                    type: string
+                    nullable: true
+                  teeth_number:
+                    type: integer
+                    nullable: true
+                  teeth_material:
+                    type: integer
+                    nullable: true
+                  material:
+                    type: integer
+                    nullable: true
+                  weight:
+                    type: float
+                    nullable: true
+                  price:
+                    type: float
+                    nullable: true
+        '404':
+          description: piston not found
   "/replicas":
     get:
       summary: Retrieves all replicas
@@ -22,12 +1434,16 @@ paths:
                       type: integer
                     name:
                       type: string
+                      nullable: true
                     reference:
                       type: string
+                      nullable: true
                     category:
                       type: string
+                      nullable: true
                     price:
                       type: number
+                      nullable: true
             application/xml:
               schema:
                 type: array
@@ -37,16 +1453,16 @@ paths:
                       type: integer
                     name:
                       type: string
+                      nullable: true
                     reference:
                       type: string
+                      nullable: true
                     category:
                       type: string
+                      nullable: true
                     price:
                       type: number
-        '404':
-          description: replica not found
-        '406':
-          description: unsupported accept header
+                      nullable: true
     post:
       summary: Creates a replica
       tags:
@@ -63,13 +1479,19 @@ paths:
             schema:
               type: object
               properties:
-                title:
+                name:
                   type: string
-                content:
+                reference:
                   type: string
+                  nullable: true
+                category:
+                  type: string
+                  nullable: true
+                price:
+                  type: number
+                  nullable: true
               required:
-              - title
-              - content
+              - name
   "/replicas/{id}":
     get:
       summary: Retrieves a replica
@@ -93,12 +1515,16 @@ paths:
                     type: integer
                   name:
                     type: string
+                    nullable: true
                   reference:
                     type: string
+                    nullable: true
                   category:
                     type: string
+                    nullable: true
                   price:
                     type: number
+                    nullable: true
             application/xml:
               schema:
                 type: object
@@ -107,16 +1533,336 @@ paths:
                     type: integer
                   name:
                     type: string
+                    nullable: true
                   reference:
                     type: string
+                    nullable: true
                   category:
                     type: string
+                    nullable: true
                   price:
                     type: number
+                    nullable: true
         '404':
           description: replica not found
-        '406':
-          description: unsupported accept header
+  "/spring_guides":
+    get:
+      summary: Retrieves all spring guides
+      tags:
+      - Spring guides
+      responses:
+        '200':
+          description: spring guide found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  properties:
+                    id:
+                      type: integer
+                    brand:
+                      type: string
+                      nullable: true
+                    reference:
+                      type: string
+                      nullable: true
+                    length:
+                      type: float
+                      nullable: true
+                    quick_detach:
+                      type: boolean
+                      nullable: true
+                    on_bearing:
+                      type: boolean
+                      nullable: true
+                    weight:
+                      type: float
+                      nullable: true
+                    price:
+                      type: float
+                      nullable: true
+            application/xml:
+              schema:
+                type: array
+                items:
+                  properties:
+                    id:
+                      type: integer
+                    brand:
+                      type: string
+                      nullable: true
+                    reference:
+                      type: string
+                      nullable: true
+                    length:
+                      type: float
+                      nullable: true
+                    quick_detach:
+                      type: boolean
+                      nullable: true
+                    on_bearing:
+                      type: boolean
+                      nullable: true
+                    weight:
+                      type: float
+                      nullable: true
+                    price:
+                      type: float
+                      nullable: true
+    post:
+      summary: Creates a spring guide
+      tags:
+      - Spring guides
+      parameters: []
+      responses:
+        '201':
+          description: spring_guide created
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                brand:
+                  type: string
+                  nullable: true
+                reference:
+                  type: string
+                length:
+                  type: float
+                  nullable: true
+                quick_detach:
+                  type: boolean
+                  nullable: true
+                on_bearing:
+                  type: boolean
+                  nullable: true
+                weight:
+                  type: float
+                  nullable: true
+                price:
+                  type: float
+                  nullable: true
+              required:
+              - reference
+  "/spring_guides/{id}":
+    get:
+      summary: Retrieves a spring_guide
+      tags:
+      - Spring guides
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: spring guide found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  brand:
+                    type: string
+                    nullable: true
+                  reference:
+                    type: string
+                    nullable: true
+                  length:
+                    type: float
+                    nullable: true
+                  quick_detach:
+                    type: boolean
+                    nullable: true
+                  on_bearing:
+                    type: boolean
+                    nullable: true
+                  weight:
+                    type: float
+                    nullable: true
+                  price:
+                    type: float
+                    nullable: true
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  brand:
+                    type: string
+                    nullable: true
+                  reference:
+                    type: string
+                    nullable: true
+                  length:
+                    type: float
+                    nullable: true
+                  quick_detach:
+                    type: boolean
+                    nullable: true
+                  on_bearing:
+                    type: boolean
+                    nullable: true
+                  weight:
+                    type: float
+                    nullable: true
+                  price:
+                    type: float
+                    nullable: true
+        '404':
+          description: spring guide not found
+  "/springs":
+    get:
+      summary: Retrieves all springs
+      tags:
+      - Springs
+      responses:
+        '200':
+          description: spring found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  properties:
+                    id:
+                      type: integer
+                    brand:
+                      type: string
+                      nullable: true
+                    reference:
+                      type: string
+                      nullable: true
+                    spires:
+                      type: integer
+                      nullable: true
+                    linear:
+                      type: boolean
+                      nullable: true
+                    price:
+                      type: float
+                      nullable: true
+            application/xml:
+              schema:
+                type: array
+                items:
+                  properties:
+                    id:
+                      type: integer
+                    brand:
+                      type: string
+                      nullable: true
+                    reference:
+                      type: string
+                      nullable: true
+                    spires:
+                      type: integer
+                      nullable: true
+                    linear:
+                      type: boolean
+                      nullable: true
+                    price:
+                      type: float
+                      nullable: true
+    post:
+      summary: Creates a spring
+      tags:
+      - Springs
+      parameters: []
+      responses:
+        '201':
+          description: spring created
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                brand:
+                  type: string
+                  nullable: true
+                reference:
+                  type: string
+                spires:
+                  type: integer
+                  nullable: true
+                linear:
+                  type: boolean
+                  nullable: true
+                price:
+                  type: float
+                  nullable: true
+              required:
+              - reference
+  "/springs/{id}":
+    get:
+      summary: Retrieves a spring
+      tags:
+      - Springs
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: spring found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  brand:
+                    type: string
+                    nullable: true
+                  reference:
+                    type: string
+                    nullable: true
+                  spires:
+                    type: integer
+                    nullable: true
+                  linear:
+                    type: boolean
+                    nullable: true
+                  price:
+                    type: float
+                    nullable: true
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  brand:
+                    type: string
+                    nullable: true
+                  reference:
+                    type: string
+                    nullable: true
+                  spires:
+                    type: integer
+                    nullable: true
+                  linear:
+                    type: boolean
+                    nullable: true
+                  price:
+                    type: float
+                    nullable: true
+        '404':
+          description: spring not found
 servers:
 - url: http://{defaultHost}
   variables:

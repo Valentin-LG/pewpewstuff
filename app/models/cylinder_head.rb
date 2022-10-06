@@ -18,4 +18,6 @@
 #
 class CylinderHead < ApplicationRecord
   enum material: MATERIALS
+
+  validates :reference, presence: true
 end

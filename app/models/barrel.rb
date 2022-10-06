@@ -18,4 +18,6 @@
 class Barrel < ApplicationRecord
   enum compatibility: CATEGORIES
   enum material: MATERIALS
+
+  validates :reference, presence: true
 end

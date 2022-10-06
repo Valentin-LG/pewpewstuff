@@ -18,4 +18,6 @@
 class Piston < ApplicationRecord
   enum material: MATERIALS
   enum teeth_material: MATERIALS, _prefix: true
+
+  validates :reference, presence: true
 end

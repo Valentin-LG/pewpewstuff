@@ -18,4 +18,6 @@
 #
 class Nozzle < ApplicationRecord
   enum material: MATERIALS
+
+  validates :reference, presence: true
 end

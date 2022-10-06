@@ -16,4 +16,6 @@
 #
 class HopUpUnit < ApplicationRecord
   enum material: MATERIALS
+
+  validates :reference, presence: true
 end

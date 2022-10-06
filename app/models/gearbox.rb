@@ -30,4 +30,6 @@ class Gearbox < ApplicationRecord
   has_one :piston_head_id
   has_one :spring_id
   has_one :spring_guide_id
+
+  validates :reference, presence: true
 end
