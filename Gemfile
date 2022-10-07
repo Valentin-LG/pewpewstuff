@@ -11,10 +11,17 @@ gem 'rails', '~> 7.0.4'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
 
+# Security gems
+gem 'devise'
+gem 'devise-jwt'
+
+gem 'rack-cors'
+
 # Swagger integration
 gem 'rspec-rails'
 gem 'rswag'
 
+# Quality gems
 gem 'brakeman'
 gem 'bundler-audit'
 gem 'rubocop', require: false
