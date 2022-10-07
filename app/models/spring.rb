@@ -14,6 +14,5 @@
 #  updated_at :datetime         not null
 #
 class Spring < ApplicationRecord
-
   validates :reference, presence: true
 end
