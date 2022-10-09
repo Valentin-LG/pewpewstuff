@@ -12,10 +12,10 @@ gem 'rails', '~> 7.0.4'
 gem 'pg', '~> 1.1'
 
 # Security gems
-gem 'devise', '~> 4.8'
-gem 'devise-jwt', '~> 0.9.0'
+gem 'devise'
+gem 'devise-jwt'
 
-gem 'rack-cors', '~> 1.1'
+gem 'rack-cors'
 
 # Swagger integration
 gem 'rspec-rails'

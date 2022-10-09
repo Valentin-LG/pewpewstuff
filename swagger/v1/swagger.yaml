@@ -1420,7 +1420,9 @@ paths:
     get:
       summary: Retrieves all replicas
       tags:
-      - Replicas
+        - Replicas
+      security:
+        - basic_auth: [ ]
       responses:
         '200':
           description: replica found
@@ -1868,3 +1870,8 @@ servers:
   variables:
     defaultHost:
       default: localhost:3000
+components:
+  securitySchemes:
+    basic_auth:
+      type: http
+      scheme: basic

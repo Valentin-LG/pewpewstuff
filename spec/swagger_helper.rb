@@ -20,18 +20,14 @@ RSpec.configure do |config|
       info: {
         title: 'API V1',
         version: 'v1'
-      },
-      paths: {},
-      servers: [
-        {
-          url: 'http://{defaultHost}',
-          variables: {
-            defaultHost: {
-              default: 'localhost:3000'
-            }
-          }
-        }
-      ]
+      }, paths: {}, servers: [{ url: 'http://{defaultHost}', variables: { defaultHost: { default: 'localhost:3000'
+      }
+      }
+                              }
+      ], components: { securitySchemes: { basic_auth: { type: :http, scheme: :basic
+      }
+      }
+      }
     }
   }
 
