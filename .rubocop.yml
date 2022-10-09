@@ -162,3 +162,8 @@ Style/StringChars:
   Enabled: true
 Style/SwapValues:
   Enabled: true
+
+Naming/AccessorMethodName:
+  Enabled: true
+  Exclude:
+    - 'app/controllers/members_controller.rb'
