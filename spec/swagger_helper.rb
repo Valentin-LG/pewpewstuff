@@ -15,20 +15,7 @@ RSpec.configure do |config|
   # document below. You can override this behavior by adding a swagger_doc tag to the
   # the root example_group in your specs, e.g. describe '...', swagger_doc: 'v2/swagger.json'
   config.swagger_docs = {
-    'v1/swagger.yaml' => {
-      openapi: '3.0.1',
-      info: {
-        title: 'API V1',
-        version: 'v1'
-      }, paths: {}, servers: [{ url: 'http://{defaultHost}', variables: { defaultHost: { default: 'localhost:3000'
-      }
-      }
-                              }
-      ], components: { securitySchemes: { basic_auth: { type: :http, scheme: :basic
-      }
-      }
-      }
-    }
+    'v1/swagger.yaml' => { openapi: '3.0.1', info: { title: 'API V1', version: 'v1' }, paths: {}, servers: [{ url: 'http://{defaultHost}', variables: { defaultHost: { default: 'localhost:3000' } } }], components: { securitySchemes: { basic_auth: { type: :http, scheme: :basic } } } }
   }
 
   # Specify the format of the output Swagger file when running 'rswag:specs:swaggerize'.
