@@ -6,7 +6,7 @@ RSpec.describe 'api/replicas', type: :request do
   path '/replicas' do
     get 'Retrieves all replicas' do
       tags 'Replicas'
-      security [basic_auth: []]
+      # security [basic_auth: []]
       produces 'application/json', 'application/xml'
 
       response '200', 'replica found' do
