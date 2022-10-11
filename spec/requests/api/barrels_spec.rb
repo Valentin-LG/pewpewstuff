@@ -6,6 +6,7 @@ RSpec.describe 'api/barrels', type: :request do
   path '/barrels' do
     get 'Retrieves all barrels' do
       tags 'Barrels'
+      security [basic_auth: []]
       produces 'application/json', 'application/xml'
 
       response '200', 'barrel found' do

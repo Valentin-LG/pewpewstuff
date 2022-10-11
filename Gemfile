@@ -14,6 +14,7 @@ gem 'pg', '~> 1.1'
 # Security gems
 gem 'devise'
 gem 'devise-jwt'
+gem 'pundit'
 
 gem 'rack-cors'
 
@@ -60,6 +61,7 @@ gem 'active_model_serializers', '~> 0.10.13'
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+  gem 'byebug'
 end
 
 group :development do

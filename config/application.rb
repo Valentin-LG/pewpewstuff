@@ -20,6 +20,9 @@ module Pewpewstuff
 
     config.middleware.use config.session_store, config.session_options
 
+    # Handle pundit NotAuthorization responses
+    config.action_dispatch.rescue_responses["Pundit::NotAuthorizedError"] = :forbidden
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files

@@ -8,7 +8,9 @@ paths:
     get:
       summary: Retrieves all barrels
       tags:
-      - Barrels
+        - Barrels
+      security:
+        - basic_auth: [ ]
       responses:
         '200':
           description: barrel found
@@ -702,11 +704,126 @@ paths:
                     nullable: true
         '404':
           description: hop up unit not found
+  "/items":
+    get:
+      summary: Retrieves all items
+      tags:
+        - Items
+      responses:
+        '200':
+          description: item found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  properties:
+                    id:
+                      type: integer
+                    user_id:
+                      type: integer
+                    part_id:
+                      type: integer
+                    part_type:
+                      type: string
+                    comment:
+                      type: text
+                      nullable: true
+            application/xml:
+              schema:
+                type: array
+                items:
+                  properties:
+                    id:
+                      type: integer
+                    user_id:
+                      type: integer
+                    part_id:
+                      type: integer
+                    part_type:
+                      type: string
+                    comment:
+                      type: text
+                      nullable: true
+    post:
+      summary: Creates a item
+      tags:
+        - Items
+      parameters: [ ]
+      responses:
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_id:
+                  type: integer
+                part_id:
+                  type: integer
+                part_type:
+                  type: string
+                comment:
+                  type: text
+                  nullable: true
+              required:
+                - user_id
+                - part_id
+                - part_type
+  "/items/{id}":
+    get:
+      summary: Retrieves a item
+      tags:
+        - Items
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: item found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  user_id:
+                    type: integer
+                  part_id:
+                    type: integer
+                  part_type:
+                    type: string
+                  comment:
+                    type: text
+                    nullable: true
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  user_id:
+                    type: integer
+                  part_id:
+                    type: integer
+                  part_type:
+                    type: string
+                  comment:
+                    type: text
+                    nullable: true
+        '404':
+          description: item not found
   "/joint_hop_ups":
     get:
       summary: Retrieves all joint hop ups
       tags:
-      - Joint hop ups
+        - Joint hop ups
       responses:
         '200':
           description: joint hop up found
@@ -1421,8 +1538,6 @@ paths:
       summary: Retrieves all replicas
       tags:
         - Replicas
-      security:
-        - basic_auth: [ ]
       responses:
         '200':
           description: replica found
