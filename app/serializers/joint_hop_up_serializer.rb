@@ -14,6 +14,7 @@
 #  toughness     :integer
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
+#  replica_id    :bigint
 #
 class JointHopUpSerializer < ActiveModel::Serializer
   attributes :id, :brand, :reference, :material, :length, :toughness, :compatibility, :price

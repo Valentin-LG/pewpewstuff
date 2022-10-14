@@ -13,6 +13,7 @@
 #  weight      :float
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  replica_id  :bigint
 #
 class HopUpUnitSerializer < ActiveModel::Serializer
   attributes :id, :brand, :reference, :material, :for_replica, :weight, :price

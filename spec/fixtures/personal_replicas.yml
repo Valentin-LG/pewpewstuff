@@ -1,0 +1,28 @@
+# == Schema Information
+#
+# Table name: personal_replicas
+#
+#  id         :bigint           not null, primary key
+#  brand      :string
+#  category   :integer
+#  name       :string
+#  price      :float
+#  reference  :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  user_id    :bigint
+#
+p90:
+  brand: "Cybergun"
+  name: "FN P90"
+  reference: "FN P90 AEG FDE"
+  category: "aeg"
+  price: 149.99
+
+g36:
+  user: padme
+  brand: "Specna Arms"
+  name: "H&K G36C"
+  reference: "SA-G12V"
+  category: "aeg"
+  price: 169.99

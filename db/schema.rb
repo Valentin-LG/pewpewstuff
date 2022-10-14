@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_10_141943) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_11_125501) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -24,6 +24,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_10_141943) do
     t.float "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "replica_id"
   end
 
   create_table "cylinder_heads", force: :cascade do |t|
@@ -37,6 +38,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_10_141943) do
     t.float "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "gearbox_id"
   end
 
   create_table "cylinders", force: :cascade do |t|
@@ -50,6 +52,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_10_141943) do
     t.float "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "gearbox_id"
   end
 
   create_table "gearboxes", force: :cascade do |t|
@@ -62,13 +65,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_10_141943) do
     t.float "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "cylinder_id"
-    t.integer "cylinder_head_id"
-    t.integer "nozzle_id"
-    t.integer "piston_id"
-    t.integer "piston_head_id"
-    t.integer "spring_id"
-    t.integer "spring_guide_id"
+    t.bigint "replica_id"
   end
 
   create_table "hop_up_units", force: :cascade do |t|
@@ -80,6 +77,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_10_141943) do
     t.float "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "replica_id"
   end
 
   create_table "items", force: :cascade do |t|
@@ -89,6 +87,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_10_141943) do
     t.text "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "personal_replica_id"
+    t.bigint "personal_gearbox_id"
   end
 
   create_table "joint_hop_ups", force: :cascade do |t|
@@ -101,6 +101,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_10_141943) do
     t.float "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "replica_id"
   end
 
   create_table "jwt_denylist", force: :cascade do |t|
@@ -122,6 +123,32 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_10_141943) do
     t.float "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "gearbox_id"
+  end
+
+  create_table "personal_gearboxes", force: :cascade do |t|
+    t.string "brand"
+    t.string "reference"
+    t.string "version"
+    t.boolean "quick_detach"
+    t.boolean "blowback"
+    t.boolean "reinfored"
+    t.float "price"
+    t.bigint "user_id"
+    t.bigint "personal_replica_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "personal_replicas", force: :cascade do |t|
+    t.string "brand"
+    t.string "name"
+    t.string "reference"
+    t.integer "category"
+    t.float "price"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "piston_heads", force: :cascade do |t|
@@ -134,6 +161,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_10_141943) do
     t.float "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "gearbox_id"
   end
 
   create_table "pistons", force: :cascade do |t|
@@ -146,6 +174,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_10_141943) do
     t.float "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "gearbox_id"
   end
 
   create_table "replicas", force: :cascade do |t|
@@ -156,10 +185,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_10_141943) do
     t.float "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "gearbox_id"
-    t.integer "barrel_id"
-    t.integer "hop_up_unit_id"
-    t.integer "joint_hop_up_id"
   end
 
   create_table "spring_guides", force: :cascade do |t|
@@ -172,6 +197,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_10_141943) do
     t.float "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "gearbox_id"
   end
 
   create_table "springs", force: :cascade do |t|
@@ -182,6 +208,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_10_141943) do
     t.float "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "gearbox_id"
   end
 
   create_table "users", force: :cascade do |t|

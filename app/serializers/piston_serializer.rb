@@ -14,6 +14,7 @@
 #  weight         :float
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
+#  gearbox_id     :bigint
 #
 class PistonSerializer < ActiveModel::Serializer
   attributes :id, :brand, :reference, :teeth_number, :teeth_material, :material, :weight, :price

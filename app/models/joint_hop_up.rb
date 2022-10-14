@@ -14,8 +14,11 @@
 #  toughness     :integer
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
+#  replica_id    :bigint
 #
 class JointHopUp < ApplicationRecord
+  belongs_to :replica, optional: true
+
   enum compatibility: CATEGORIES
   enum material: MATERIALS
 

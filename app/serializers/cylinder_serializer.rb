@@ -15,6 +15,7 @@
 #  weigh      :float
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  gearbox_id :bigint
 #
 class CylinderSerializer < ActiveModel::Serializer
   attributes :id, :brand, :reference, :material, :size, :diameter, :weigh, :drilled, :price

@@ -14,6 +14,7 @@
 #  reference     :string
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
+#  replica_id    :bigint
 #
 class BarrelSerializer < ActiveModel::Serializer
   attributes :id, :brand, :reference, :material, :length, :diameter, :compatibility, :price

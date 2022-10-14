@@ -14,6 +14,7 @@
 #  weight       :float
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
+#  gearbox_id   :bigint
 #
 class SpringGuideSerializer < ActiveModel::Serializer
   attributes :id, :brand, :reference, :length, :quick_detach, :on_bearing, :weight, :price

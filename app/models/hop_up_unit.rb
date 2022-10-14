@@ -13,8 +13,11 @@
 #  weight      :float
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  replica_id  :bigint
 #
 class HopUpUnit < ApplicationRecord
+  belongs_to :replica, optional: true
+
   enum material: MATERIALS
 
   validates :reference, presence: true

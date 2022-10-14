@@ -15,8 +15,11 @@
 #  weight      :float
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  gearbox_id  :bigint
 #
 class Nozzle < ApplicationRecord
+  belongs_to :gearbox, optional: true
+
   enum material: MATERIALS
 
   validates :reference, presence: true

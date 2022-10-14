@@ -12,6 +12,7 @@
 #  spires     :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  gearbox_id :bigint
 #
 require 'test_helper'
 

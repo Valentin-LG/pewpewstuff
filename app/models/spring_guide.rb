@@ -14,7 +14,10 @@
 #  weight       :float
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
+#  gearbox_id   :bigint
 #
 class SpringGuide < ApplicationRecord
+  belongs_to :gearbox, optional: true
+
   validates :reference, presence: true
 end
