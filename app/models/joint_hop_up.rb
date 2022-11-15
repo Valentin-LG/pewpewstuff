@@ -19,8 +19,8 @@
 class JointHopUp < ApplicationRecord
   belongs_to :replica, optional: true
 
-  enum compatibility: CATEGORIES
-  enum material: MATERIALS
+  enum compatibility: Constants::CATEGORIES
+  enum material: Constants::MATERIALS
 
   validates :reference, presence: true
 end

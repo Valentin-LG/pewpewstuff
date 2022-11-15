@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: personal_replicas
@@ -15,7 +17,6 @@
 require 'rails_helper'
 
 RSpec.describe PersonalReplica, type: :model do
-
   fixtures :users, :replicas, :personal_replicas, :barrels, :hop_up_units, :joint_hop_ups, :gearboxes, :personal_gearboxes, :cylinders, :cylinder_heads, :nozzles, :pistons, :piston_heads
 
   let(:user) { users(:padme) }

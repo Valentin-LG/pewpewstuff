@@ -20,7 +20,7 @@
 class Cylinder < ApplicationRecord
   belongs_to :gearbox, optional: true
 
-  enum material: MATERIALS
+  enum material: Constants::MATERIALS
 
   validates :reference, presence: true
 end

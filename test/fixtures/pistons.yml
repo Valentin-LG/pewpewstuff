@@ -19,7 +19,7 @@ atm:
   brand: "ATM"
   reference: "ATM Xtra Precision Piston Full Teeth Acier (Ver.3)"
   teeth_number: 14
-  teeth_material: "metal"
+  teeth_material: 1
   material: "polymer"
   weight: 15.85
   price: 5.9

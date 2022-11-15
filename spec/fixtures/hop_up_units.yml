@@ -17,16 +17,18 @@
 p90:
   brand: "proWin"
   reference: "Chambre Hop-Up P90 ProWin"
-  material: "aluminium"
+  material: 0
   for_replica: "P90"
   weight: nil
   price: 26.9
+  replica: p90
 
 specna:
   brand: "specna arms"
   reference: 'default'
-  material: "plastic"
+  material: 4
   for_replica: "G36"
   weight: nil
   price: nil
+  replica: g36
 

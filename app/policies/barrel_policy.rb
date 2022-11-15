@@ -1,20 +1,13 @@
+# frozen_string_literal: true
+
 class BarrelPolicy < ApplicationPolicy
   class Scope
     def initialize(user, scope)
-      p "in initialize ////////////////////////////"
-      p scope
-      byebug
-      p "in initialize ////////////////////////////"
       @user = user
       @scope = scope
     end
 
     def resolve
-      p "============================"
-      p "in #{__FILE__ }->resolve?"
-      p scope
-      byebug
-      p "============================"
       scope.all
     end
 

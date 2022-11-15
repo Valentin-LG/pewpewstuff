@@ -19,12 +19,13 @@
 atm_g36:
   brand: "ATM"
   reference: "ATM Xtra Precision Nozzle AR366"
-  material: "aluminium"
+  material: 0
   o_ring: 1
   for_replica: "G36"
   weight: nil
   length: 24.5
   price: 1.9
+  gearbox: v3
 
 shs_P90:
   brand: "SHS"
@@ -35,4 +36,5 @@ shs_P90:
   weight: nil
   length: 20.8
   price: 3.9
+  gearbox: v6
 

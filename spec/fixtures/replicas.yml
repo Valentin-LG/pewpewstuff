@@ -16,12 +16,12 @@ p90:
   brand: "Cybergun"
   name: "FN P90"
   reference: "FN P90 AEG FDE"
-  category: "aeg"
+  category: à
   price: 149.99
 
 g36:
   brand: "Specna Arms"
   name: "H&K G36C"
   reference: "SA-G12V"
-  category: "aeg"
+  category: à
   price: 169.99

@@ -19,20 +19,22 @@
 shs:
   brand: "Super Shooter SHS"
   reference: "Super Shooter SHS Tête de Cylindre Silencieuse"
-  material: "aluminium"
+  material: 0
   o_ring: 2
   for_replica: "type V2/V3"
   silenced: true
   weight: nil
   price: 8.9
+  gearbox: v3
 
 cybergun_p90:
   brand: "cybergun"
   reference: nil
-  material: "plastic"
+  material: 2
   o_ring: 1
   for_replica: "P90"
   silenced: false
   weight: nil
   price: nil
+  gearbox: v6
 

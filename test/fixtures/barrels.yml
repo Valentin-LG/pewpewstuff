@@ -18,7 +18,7 @@
 cybergun:
   brand: 'cybergun'
   reference: 'default barrel'
-  material: 'laiton'
+  material: 4
   length: 247.0
   diameter: 6.08
   compatibility: 'aeg'
@@ -26,7 +26,7 @@ cybergun:
 specna:
   brand: 'specna arms'
   reference: 'default'
-  material: 'laiton'
+  material: 4
   length: 247.0
   diameter: 6.08
   compatibility: 'aeg'

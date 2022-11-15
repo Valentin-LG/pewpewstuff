@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class ItemsController < ApplicationController
-  before_action :set_item, only: %i[ show update destroy ]
+  before_action :set_item, only: %i[show update destroy]
 
   # GET /items
   def index
@@ -18,7 +20,7 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
 
     if @item.save
-      render json: @item, status: :created, location: @item
+      render json: @item, status: :created, location: user_item_url(current_user.id, @item)
     else render json: @item.errors, status: :unprocessable_entity
     end
   end

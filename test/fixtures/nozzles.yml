@@ -19,7 +19,7 @@
 atm_g36:
   brand: "ATM"
   reference: "ATM Xtra Precision Nozzle AR366"
-  material: "aluminium"
+  material: 0
   o_ring: 1
   for_replica: "G36"
   weight: nil

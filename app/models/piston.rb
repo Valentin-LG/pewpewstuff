@@ -19,8 +19,8 @@
 class Piston < ApplicationRecord
   belongs_to :gearbox, optional: true
 
-  enum material: MATERIALS
-  enum teeth_material: MATERIALS, _prefix: true
+  enum material: Constants::MATERIALS
+  enum teeth_material: Constants::MATERIALS, _prefix: true
 
   validates :reference, presence: true
 end

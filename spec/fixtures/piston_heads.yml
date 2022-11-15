@@ -18,17 +18,19 @@
 atm:
   brand: "ATM"
   reference: "ATM Xtra Precision Tête de Piston Métal"
-  material: "metal"
+  material: 1
   silenced: false
   on_bearing: true
   weight: 12.26
   price: 5.9
+  gearbox: v6
 
 shs_silenced:
   brand: "Super Shooter SHS"
   reference: "Super Shooter SHS Tête de Piston Silencieuse"
-  material: "metal"
+  material: 1
   silenced: true
   on_bearing: true
   weight: 12.6
   price: 8.9
+  gearbox: v3

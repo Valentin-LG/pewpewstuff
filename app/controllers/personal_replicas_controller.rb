@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class PersonalReplicasController < ApplicationController
-  before_action :set_personal_replica, only: %i[ show update destroy ]
+  before_action :set_personal_replica, only: %i[show update destroy]
 
   # GET /personal_replicas
   def index

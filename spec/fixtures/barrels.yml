@@ -18,16 +18,18 @@
 cybergun:
   brand: 'cybergun'
   reference: 'default barrel'
-  material: 'laiton'
+  material: 4
   length: 247.0
   diameter: 6.08
   compatibility: 'aeg'
+  replica: p90
 
 specna:
   brand: 'specna arms'
   reference: 'default'
-  material: 'laiton'
+  material: 4
   length: 247.0
   diameter: 6.08
   compatibility: 'aeg'
+  replica: g36
 

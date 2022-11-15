@@ -23,6 +23,7 @@ RSpec.describe 'api/barrels', type: :request do
                    price: { type: :float, nullable: true }
                  }
                }
+        let(:Authorization) { valid_basic_auth_token }
 
         run_test!
       end

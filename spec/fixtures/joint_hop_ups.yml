@@ -23,6 +23,7 @@ maple60:
   toughness: 60
   compatibility: 'aeg'
   price: 9.9
+  replica: g36
 
 maple50:
   brand: 'maple leaf'
@@ -32,3 +33,4 @@ maple50:
   toughness: 50
   compatibility: 'aeg'
   price: 9.9
+  replica: p90

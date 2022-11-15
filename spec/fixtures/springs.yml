@@ -19,6 +19,7 @@ sp90:
   spires: 90
   linear: false
   price: 12.9
+  gearbox: v6
 
 begadi90:
   brand: "Begadi"
@@ -26,3 +27,4 @@ begadi90:
   spires: 90
   linear: false
   price: 6.9
+  gearbox: v3

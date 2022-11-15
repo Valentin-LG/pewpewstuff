@@ -16,13 +16,28 @@
 #
 class PersonalReplica < ApplicationRecord
   belongs_to :user, optional: true # remove optional true
-  has_one :barrel, class_name: 'Item', foreign_key: :part_id, autosave: true
+  has_one :personal_gearbox
+  has_one :personal_barrel, ->(record) { where("personal_replica_id = :personal_replica_id AND part_type = 'Barrel'", personal_replica_id: record.id) }, class_name: 'Item'
+  has_one :personal_hop_up_unit, ->(record) { where("personal_replica_id = :personal_replica_id AND part_type = 'HopUpUnit'", personal_replica_id: record.id) }, class_name: 'Item'
+  has_one :personal_joint_hop_up, ->(record) { where("personal_replica_id = :personal_replica_id AND part_type = 'JointHopUp'", personal_replica_id: record.id) }, class_name: 'Item'
 
-  enum category: CATEGORIES
+  enum category: Constants::CATEGORIES
 
   validates :name, presence: true
 
-  def barrel=(barrel)
-    Item.create(part_type: barrel.class, part_id: barrel.id, personal_replica_id: self.id)
+  def gearbox
+    personal_gearbox
+  end
+
+  def barrel
+    Barrel.find(personal_barrel.part_id)
+  end
+
+  def hop_up_unit
+    HopUpUnit.find(personal_hop_up_unit.part_id)
+  end
+
+  def joint_hop_up
+    JointHopUp.find(personal_joint_hop_up.part_id)
   end
 end

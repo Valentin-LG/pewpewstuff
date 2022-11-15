@@ -9,9 +9,7 @@ RSpec.describe 'api/cylinders', type: :request do
       produces 'application/json', 'application/xml'
 
       response '200', 'cylinder found' do
-        schema type: :array, items: { properties: { id: { type: :integer }, brand: { type: :string, nullable: true }, reference: { type: :string, nullable: true }, material: { type: :integer, nullable: true }, weight: { type: :float, nullable: true }, price: { type: :float, nullable: true }
-        }
-        }
+        schema type: :array, items: { properties: { id: { type: :integer }, brand: { type: :string, nullable: true }, reference: { type: :string, nullable: true }, material: { type: :integer, nullable: true }, weight: { type: :float, nullable: true }, price: { type: :float, nullable: true } } }
 
         run_test!
       end
@@ -24,8 +22,7 @@ RSpec.describe 'api/cylinders', type: :request do
         parameter name: :id, in: :path, type: :string
 
         response '200', 'cylinder found' do
-          schema type: :object, properties: { id: { type: :integer }, brand: { type: :string, nullable: true }, reference: { type: :string, nullable: true }, material: { type: :integer, nullable: true }, weight: { type: :float, nullable: true }, price: { type: :float, nullable: true }
-          }
+          schema type: :object, properties: { id: { type: :integer }, brand: { type: :string, nullable: true }, reference: { type: :string, nullable: true }, material: { type: :integer, nullable: true }, weight: { type: :float, nullable: true }, price: { type: :float, nullable: true } }
 
           let(:id) { Cylinder.create(reference: 'shs').id }
           run_test!
@@ -41,9 +38,7 @@ RSpec.describe 'api/cylinders', type: :request do
     post 'Creates a cylinder' do
       tags 'Cylinders'
       consumes 'application/json'
-      parameter name: :cylinder, in: :body, schema: { type: :object, properties: { brand: { type: :string, nullable: true }, reference: { type: :string }, material: { type: :integer, nullable: true }, weight: { type: :float, nullable: true }, price: { type: :float, nullable: true }
-      }, required: ['reference']
-      }
+      parameter name: :cylinder, in: :body, schema: { type: :object, properties: { brand: { type: :string, nullable: true }, reference: { type: :string }, material: { type: :integer, nullable: true }, weight: { type: :float, nullable: true }, price: { type: :float, nullable: true } }, required: ['reference'] }
 
       response '201', 'cylinder created' do
         let(:cylinder) { { reference: 'SL8' } }

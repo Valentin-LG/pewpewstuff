@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class PersonalGearboxesController < ApplicationController
-  before_action :set_personal_gearbox, only: %i[ show update destroy ]
+  before_action :set_personal_gearbox, only: %i[show update destroy]
 
   # GET /personal_gearboxes
   def index

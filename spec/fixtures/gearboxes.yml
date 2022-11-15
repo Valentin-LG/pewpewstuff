@@ -23,6 +23,7 @@ v6:
   blowback: false
   reinfored: nil
   price: nil
+  replica: p90
 
 v3:
   brand: 'specna arms'
@@ -32,4 +33,5 @@ v3:
   blowback: true
   reinfored: true
   price: nil
+  replica: g36
 

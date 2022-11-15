@@ -15,7 +15,7 @@
 #  user_id             :bigint
 #
 class Item < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, optional: true # remove this optional, item must belong to someone
   belongs_to :personal_replica, optional: true
   belongs_to :personal_gearbox, optional: true
 

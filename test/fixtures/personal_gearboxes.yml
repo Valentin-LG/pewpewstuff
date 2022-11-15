@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # == Schema Information
 #
 # Table name: personal_gearboxes
@@ -17,6 +15,11 @@
 #  personal_replica_id :bigint
 #  user_id             :bigint
 #
-class PersonalGearboxSerializer < ActiveModel::Serializer
-  attributes :id, :user_id, :brand, :reference, :version, :quick_detach, :blowback, :reinfored, :price, :cylinder_id, :cylinder_head_id, :nozzle_id, :piston_id, :piston_head_id, :spring_id, :spring_guide_id
-end
+v3:
+  brand: 'specna arms'
+  reference: 'default'
+  version: 'V3'
+  quick_detach: true
+  blowback: true
+  reinfored: true
+  price: nil

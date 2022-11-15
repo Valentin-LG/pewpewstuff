@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,217 +12,216 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_11_125501) do
+ActiveRecord::Schema[7.0].define(version: 20_221_011_125_501) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "barrels", force: :cascade do |t|
-    t.string "brand"
-    t.string "reference"
-    t.integer "material"
-    t.float "length"
-    t.float "diameter"
-    t.integer "compatibility"
-    t.float "price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "replica_id"
+  create_table 'barrels', force: :cascade do |t|
+    t.string 'brand'
+    t.string 'reference'
+    t.integer 'material'
+    t.float 'length'
+    t.float 'diameter'
+    t.integer 'compatibility'
+    t.float 'price'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.bigint 'replica_id'
   end
 
-  create_table "cylinder_heads", force: :cascade do |t|
-    t.string "brand"
-    t.string "reference"
-    t.integer "material"
-    t.integer "o_ring"
-    t.string "for_replica"
-    t.boolean "silenced"
-    t.float "weight"
-    t.float "price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "gearbox_id"
+  create_table 'cylinder_heads', force: :cascade do |t|
+    t.string 'brand'
+    t.string 'reference'
+    t.integer 'material'
+    t.integer 'o_ring'
+    t.string 'for_replica'
+    t.boolean 'silenced'
+    t.float 'weight'
+    t.float 'price'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.bigint 'gearbox_id'
   end
 
-  create_table "cylinders", force: :cascade do |t|
-    t.string "brand"
-    t.string "reference"
-    t.integer "material"
-    t.float "size"
-    t.float "diameter"
-    t.float "weigh"
-    t.boolean "drilled"
-    t.float "price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "gearbox_id"
+  create_table 'cylinders', force: :cascade do |t|
+    t.string 'brand'
+    t.string 'reference'
+    t.integer 'material'
+    t.float 'size'
+    t.float 'diameter'
+    t.float 'weigh'
+    t.boolean 'drilled'
+    t.float 'price'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.bigint 'gearbox_id'
   end
 
-  create_table "gearboxes", force: :cascade do |t|
-    t.string "brand"
-    t.string "reference"
-    t.string "version"
-    t.boolean "quick_detach"
-    t.boolean "blowback"
-    t.boolean "reinfored"
-    t.float "price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "replica_id"
+  create_table 'gearboxes', force: :cascade do |t|
+    t.string 'brand'
+    t.string 'reference'
+    t.string 'version'
+    t.boolean 'quick_detach'
+    t.boolean 'blowback'
+    t.boolean 'reinfored'
+    t.float 'price'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.bigint 'replica_id'
   end
 
-  create_table "hop_up_units", force: :cascade do |t|
-    t.string "brand"
-    t.string "reference"
-    t.integer "material"
-    t.string "for_replica"
-    t.float "weight"
-    t.float "price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "replica_id"
+  create_table 'hop_up_units', force: :cascade do |t|
+    t.string 'brand'
+    t.string 'reference'
+    t.integer 'material'
+    t.string 'for_replica'
+    t.float 'weight'
+    t.float 'price'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.bigint 'replica_id'
   end
 
-  create_table "items", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "part_id"
-    t.string "part_type"
-    t.text "comment"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "personal_replica_id"
-    t.bigint "personal_gearbox_id"
+  create_table 'items', force: :cascade do |t|
+    t.bigint 'user_id'
+    t.bigint 'part_id'
+    t.string 'part_type'
+    t.text 'comment'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.bigint 'personal_replica_id'
+    t.bigint 'personal_gearbox_id'
   end
 
-  create_table "joint_hop_ups", force: :cascade do |t|
-    t.string "brand"
-    t.string "reference"
-    t.integer "material"
-    t.float "length"
-    t.integer "toughness"
-    t.integer "compatibility"
-    t.float "price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "replica_id"
+  create_table 'joint_hop_ups', force: :cascade do |t|
+    t.string 'brand'
+    t.string 'reference'
+    t.integer 'material'
+    t.float 'length'
+    t.integer 'toughness'
+    t.integer 'compatibility'
+    t.float 'price'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.bigint 'replica_id'
   end
 
-  create_table "jwt_denylist", force: :cascade do |t|
-    t.string "jti", null: false
-    t.datetime "exp", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["jti"], name: "index_jwt_denylist_on_jti"
+  create_table 'jwt_denylist', force: :cascade do |t|
+    t.string 'jti', null: false
+    t.datetime 'exp', null: false
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index ['jti'], name: 'index_jwt_denylist_on_jti'
   end
 
-  create_table "nozzles", force: :cascade do |t|
-    t.string "brand"
-    t.string "reference"
-    t.integer "material"
-    t.integer "o_ring"
-    t.string "for_replica"
-    t.float "weight"
-    t.float "length"
-    t.float "price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "gearbox_id"
+  create_table 'nozzles', force: :cascade do |t|
+    t.string 'brand'
+    t.string 'reference'
+    t.integer 'material'
+    t.integer 'o_ring'
+    t.string 'for_replica'
+    t.float 'weight'
+    t.float 'length'
+    t.float 'price'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.bigint 'gearbox_id'
   end
 
-  create_table "personal_gearboxes", force: :cascade do |t|
-    t.string "brand"
-    t.string "reference"
-    t.string "version"
-    t.boolean "quick_detach"
-    t.boolean "blowback"
-    t.boolean "reinfored"
-    t.float "price"
-    t.bigint "user_id"
-    t.bigint "personal_replica_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'personal_gearboxes', force: :cascade do |t|
+    t.string 'brand'
+    t.string 'reference'
+    t.string 'version'
+    t.boolean 'quick_detach'
+    t.boolean 'blowback'
+    t.boolean 'reinfored'
+    t.float 'price'
+    t.bigint 'user_id'
+    t.bigint 'personal_replica_id'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  create_table "personal_replicas", force: :cascade do |t|
-    t.string "brand"
-    t.string "name"
-    t.string "reference"
-    t.integer "category"
-    t.float "price"
-    t.bigint "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'personal_replicas', force: :cascade do |t|
+    t.string 'brand'
+    t.string 'name'
+    t.string 'reference'
+    t.integer 'category'
+    t.float 'price'
+    t.bigint 'user_id'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  create_table "piston_heads", force: :cascade do |t|
-    t.string "brand"
-    t.string "reference"
-    t.integer "material"
-    t.boolean "silenced"
-    t.boolean "on_bearing"
-    t.float "weight"
-    t.float "price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "gearbox_id"
+  create_table 'piston_heads', force: :cascade do |t|
+    t.string 'brand'
+    t.string 'reference'
+    t.integer 'material'
+    t.boolean 'silenced'
+    t.boolean 'on_bearing'
+    t.float 'weight'
+    t.float 'price'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.bigint 'gearbox_id'
   end
 
-  create_table "pistons", force: :cascade do |t|
-    t.string "brand"
-    t.string "reference"
-    t.integer "teeth_number"
-    t.integer "teeth_material"
-    t.integer "material"
-    t.float "weight"
-    t.float "price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "gearbox_id"
+  create_table 'pistons', force: :cascade do |t|
+    t.string 'brand'
+    t.string 'reference'
+    t.integer 'teeth_number'
+    t.integer 'teeth_material'
+    t.integer 'material'
+    t.float 'weight'
+    t.float 'price'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.bigint 'gearbox_id'
   end
 
-  create_table "replicas", force: :cascade do |t|
-    t.string "brand"
-    t.string "name"
-    t.string "reference"
-    t.integer "category"
-    t.float "price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'replicas', force: :cascade do |t|
+    t.string 'brand'
+    t.string 'name'
+    t.string 'reference'
+    t.integer 'category'
+    t.float 'price'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  create_table "spring_guides", force: :cascade do |t|
-    t.string "brand"
-    t.string "reference"
-    t.float "length"
-    t.boolean "quick_detach"
-    t.boolean "on_bearing"
-    t.float "weight"
-    t.float "price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "gearbox_id"
+  create_table 'spring_guides', force: :cascade do |t|
+    t.string 'brand'
+    t.string 'reference'
+    t.float 'length'
+    t.boolean 'quick_detach'
+    t.boolean 'on_bearing'
+    t.float 'weight'
+    t.float 'price'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.bigint 'gearbox_id'
   end
 
-  create_table "springs", force: :cascade do |t|
-    t.string "brand"
-    t.string "reference"
-    t.integer "spires"
-    t.boolean "linear"
-    t.float "price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "gearbox_id"
+  create_table 'springs', force: :cascade do |t|
+    t.string 'brand'
+    t.string 'reference'
+    t.integer 'spires'
+    t.boolean 'linear'
+    t.float 'price'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.bigint 'gearbox_id'
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  create_table 'users', force: :cascade do |t|
+    t.string 'email', default: '', null: false
+    t.string 'encrypted_password', default: '', null: false
+    t.string 'reset_password_token'
+    t.datetime 'reset_password_sent_at'
+    t.datetime 'remember_created_at'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index ['email'], name: 'index_users_on_email', unique: true
+    t.index ['reset_password_token'], name: 'index_users_on_reset_password_token', unique: true
   end
-
 end

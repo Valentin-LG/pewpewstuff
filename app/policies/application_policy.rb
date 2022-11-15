@@ -38,7 +38,6 @@ class ApplicationPolicy
 
   class Scope
     def initialize(user, scope)
-      byebug
       @user = user
       @scope = scope
     end

@@ -19,10 +19,11 @@
 atm:
   brand: "ATM"
   reference: "ATM Xtra Precision Cylindre Pour Canon Moyen"
-  material: "inox"
+  material: 5
   size: nil
   diameter: nil
   weigh: nil
   drilled: true
   price: 6.9
+  gearbox: v3
 

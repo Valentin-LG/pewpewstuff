@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class FixRelations < ActiveRecord::Migration[7.0]
   def change
     remove_columns :replicas, :barrel_id, :gearbox_id, :hop_up_unit_id, :joint_hop_up_id

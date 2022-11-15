@@ -18,7 +18,7 @@
 class HopUpUnit < ApplicationRecord
   belongs_to :replica, optional: true
 
-  enum material: MATERIALS
+  enum material: Constants::MATERIALS
 
   validates :reference, presence: true
 end
